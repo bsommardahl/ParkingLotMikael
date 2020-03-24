@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.3/system/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_ParkingLotKata.-219990689.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.nuget/packages/microsoft.net.test.sdk/16.2.0/build/netcoreapp1.0" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="ParkingLotKata" t="IncludeRecursive">
+        <e p="Bus.cs" t="Include" />
+        <e p="Car.cs" t="Include" />
+        <e p="DefaultBus.cs" t="Include" />
+        <e p="DefaultCar.cs" t="Include" />
+        <e p="DefaultHeli.cs" t="Include" />
+        <e p="DefaultMoto.cs" t="Include" />
+        <e p="Driver.cs" t="Include" />
+        <e p="ElectricBusStrategy.cs" t="Include" />
+        <e p="ElectricCarStrategy.cs" t="Include" />
+        <e p="HeliStrategy.cs" t="Include" />
+        <e p="Helicopter.cs" t="Include" />
+        <e p="IAddDayStrategy.cs" t="Include" />
+        <e p="LongTermBusStrategy.cs" t="Include" />
+        <e p="LongTermCarStrategy.cs" t="Include" />
+        <e p="MotorType.cs" t="Include" />
+        <e p="Motorcycle.cs" t="Include" />
+        <e p="ParkingLot.cs" t="Include" />
+        <e p="ParkingLotKata.csproj" t="IncludeRecursive" />
+        <e p="TrumpCarStrategy.cs" t="Include" />
+        <e p="Vehicle.cs" t="Include" />
+        <e p="VehicleType.cs" t="Include" />
+        <e p="When_A_Bus_Stays_For_3_Or_More_Days.cs" t="Include" />
+        <e p="When_A_Bus_Stays_For_One_Day.cs" t="Include" />
+        <e p="When_A_Car_Stays_For_6_Or_More_Days.cs" t="Include" />
+        <e p="When_A_Car_Stays_For_One_Day.cs" t="Include" />
+        <e p="When_A_Helicopter_Stays_For_One_Day.cs" t="Include" />
+        <e p="When_A_Helicopter_Stays_For_Two_Days.cs" t="Include" />
+        <e p="When_A_MotorCycle_Stays_For_One_Day.cs" t="Include" />
+        <e p="When_A_Vehicle_Attempts_To_Enter_A_Full_Lot.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="ParkingLotKata.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="ParkingLotKata.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

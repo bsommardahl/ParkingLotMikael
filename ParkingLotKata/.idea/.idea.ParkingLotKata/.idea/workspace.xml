@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="23504e2e-999a-4d05-919d-a14003f9366f" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Bus_Stays_For_One_Day.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Helicopter_Stays_For_Two_Days.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/ParkingLot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/Helicopter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/Bus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/Motorcycle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/Car.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/Driver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Helicopter_Stays_For_One_Day.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Car_Stays_For_6_Or_More_Days.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_MotorCycle_Stays_For_One_Day.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/MotorType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Vehicle_Attempts_To_Enter_A_Full_Lot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/ElectricCarStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Car_Stays_For_One_Day.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Bus_Stays_For_3_Or_More_Days.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/Vehicle.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Car_Stays_For_6_Or_More_Days.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Vehicle_Attempts_To_Enter_A_Full_Lot.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/Bus.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/Car.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/Helicopter.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/Motorcycle.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Bus_Stays_For_3_Or_More_Days.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Car_Stays_For_One_Day.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Helicopter_Stays_For_One_Day.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Helicopter_Stays_For_Two_Days.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/When_A_MotorCycle_Stays_For_One_Day.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Bus_Stays_For_One_Day.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/Vehicle.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/ParkingLot.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZZw9R8s79tlE3O6gRXUt4dMPn9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="do_not_show_solution_notification" value="true" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23504e2e-999a-4d05-919d-a14003f9366f" name="Default Changelist" comment="" />
+      <created>1585059772710</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585059772710</updated>
+      <workItem from="1585059780246" duration="3191000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="548" y="156" width="399" height="600" key="RiderGenerateDialog" timestamp="1585060913357">
+      <screen x="0" y="0" width="1504" height="917" />
+    </state>
+    <state x="548" y="156" width="399" height="600" key="RiderGenerateDialog/0.0.1504.917@0.0.1504.917" timestamp="1585060913357" />
+  </component>
+</project>

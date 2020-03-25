@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using FluentAssertions;
 using Xunit;
 
@@ -27,31 +26,6 @@ namespace ParkingLotKata
 
             //Assert
             _driver.Wallet.Should().Be(71.2);
-        }
-    }
-
-    public abstract class given_a_parking_lot
-    {
-        protected List<IAddDayStrategy> _addDayStrategies;
-        protected ParkingLot _parkingLot;
-
-        public given_a_parking_lot()
-        {
-            _addDayStrategies = new List<IAddDayStrategy>
-            {
-                new ElectricCarStrategy(),
-                new ElectricBusStrategy(),
-                new TrumpCarStrategy(),
-                new HeliStrategy(),
-                new LongTermBusStrategy(),
-                new LongTermCarStrategy(),
-                new DefaultCar(),
-                new DefaultBus(),
-                new DefaultMoto(),
-                new DefaultHeli(),
-            };
-
-            _parkingLot = new ParkingLot(50, _addDayStrategies);
         }
     }
 }

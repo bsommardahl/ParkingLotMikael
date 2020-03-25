@@ -13,21 +13,24 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="ParkingLotKata" t="IncludeRecursive">
         <e p="Bus.cs" t="Include" />
+        <e p="BusSizeStrategy.cs" t="Include" />
+        <e p="BusStrategy.cs" t="Include" />
         <e p="Car.cs" t="Include" />
-        <e p="DefaultBus.cs" t="Include" />
+        <e p="CarSizeStrategy.cs" t="Include" />
         <e p="DefaultCar.cs" t="Include" />
         <e p="DefaultHeli.cs" t="Include" />
         <e p="DefaultMoto.cs" t="Include" />
         <e p="Driver.cs" t="Include" />
-        <e p="ElectricBusStrategy.cs" t="Include" />
         <e p="ElectricCarStrategy.cs" t="Include" />
         <e p="HeliStrategy.cs" t="Include" />
         <e p="Helicopter.cs" t="Include" />
+        <e p="HelicopterSizeStrategy.cs" t="Include" />
         <e p="IAddDayStrategy.cs" t="Include" />
-        <e p="LongTermBusStrategy.cs" t="Include" />
+        <e p="IParkingLotSizeStrategy.cs" t="Include" />
         <e p="LongTermCarStrategy.cs" t="Include" />
         <e p="MotorType.cs" t="Include" />
         <e p="Motorcycle.cs" t="Include" />
+        <e p="MotorcycleSizeStrategy.cs" t="Include" />
         <e p="ParkingLot.cs" t="Include" />
         <e p="ParkingLotKata.csproj" t="IncludeRecursive" />
         <e p="TrumpCarStrategy.cs" t="Include" />
@@ -42,6 +45,7 @@
         <e p="When_A_MotorCycle_Stays_For_One_Day.cs" t="Include" />
         <e p="When_A_Vehicle_Attempts_To_Enter_A_Full_Lot.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="given_a_parking_lot.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">

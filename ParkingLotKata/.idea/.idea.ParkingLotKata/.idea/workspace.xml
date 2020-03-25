@@ -15,14 +15,18 @@
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/Bus.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/Motorcycle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/Car.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/DefaultMoto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/Driver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Helicopter_Stays_For_One_Day.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Car_Stays_For_6_Or_More_Days.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/BusStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_MotorCycle_Stays_For_One_Day.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/MotorType.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Vehicle_Attempts_To_Enter_A_Full_Lot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/ElectricCarStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/IAddDayStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Car_Stays_For_One_Day.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata/given_a_parking_lot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/When_A_Bus_Stays_For_3_Or_More_Days.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata/Vehicle.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -39,10 +43,17 @@
         <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Car_Stays_For_One_Day.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Helicopter_Stays_For_One_Day.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Helicopter_Stays_For_Two_Days.cs" />
-        <option value="$PROJECT_DIR$/ParkingLotKata/When_A_MotorCycle_Stays_For_One_Day.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata/When_A_Bus_Stays_For_One_Day.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata/Vehicle.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/IAddDayStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata/ParkingLot.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/DefaultMoto.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/DefaultBus.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/LongTermBusStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/given_a_parking_lot.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/When_A_MotorCycle_Stays_For_One_Day.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/ElectricBusStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata/BusStrategy.cs" />
       </list>
     </option>
   </component>
@@ -73,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1585059772710</updated>
-      <workItem from="1585059780246" duration="3191000" />
+      <workItem from="1585059780246" duration="5265000" />
     </task>
     <servers />
   </component>
@@ -85,5 +96,9 @@
       <screen x="0" y="0" width="1504" height="917" />
     </state>
     <state x="548" y="156" width="399" height="600" key="RiderGenerateDialog/0.0.1504.917@0.0.1504.917" timestamp="1585060913357" />
+    <state x="415" y="198" width="672" height="678" key="search.everywhere.popup" timestamp="1585148116520">
+      <screen x="0" y="0" width="1504" height="917" />
+    </state>
+    <state x="415" y="198" width="672" height="678" key="search.everywhere.popup/0.0.1504.917@0.0.1504.917" timestamp="1585148116520" />
   </component>
 </project>

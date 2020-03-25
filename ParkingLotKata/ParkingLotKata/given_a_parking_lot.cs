@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace ParkingLotKata
 {
@@ -16,10 +18,9 @@ namespace ParkingLotKata
                 new ElectricBusStrategy(),
                 new TrumpCarStrategy(),
                 new HeliStrategy(),
-                new LongTermBusStrategy(),
+                new BusStrategy(),
                 new LongTermCarStrategy(),
                 new DefaultCar(),
-                new DefaultBus(),
                 new DefaultMoto(),
                 new DefaultHeli()
             };
@@ -32,7 +33,32 @@ namespace ParkingLotKata
 
             };
 
-            _parkingLot = new ParkingLot(50, _addDayStrategies, _sizeStrategies);
+            var addDayStrategyFactory = new AddDayStrategyFactory(_addDayStrategies) as IAddDayStrategyFactory;
+            _parkingLot = new ParkingLot(50, addDayStrategyFactory, _sizeStrategies);
         }
+    }
+
+    public class AddDayStrategyFactory : IAddDayStrategyFactory
+    {
+        readonly IEnumerable<IAddDayStrategy> _addDayStrategies;
+
+        public AddDayStrategyFactory(IEnumerable<IAddDayStrategy> addDayStrategies)
+        {
+            _addDayStrategies = addDayStrategies;
+        }
+
+        public IAddDayStrategy<T> Create<T>(T vehicle, int days) where T : Vehicle
+        {
+            var strategy = _addDayStrategies.First(x =>
+                x.GetType().GetInterfaces()
+                    .Any(i => i.GetGenericArguments().All(a => a.Name == vehicle.GetType().Name)));
+
+            return (IAddDayStrategy<T>)strategy;
+        }
+    }
+
+    public interface IAddDayStrategyFactory
+    {
+        IAddDayStrategy<T> Create<T>(T vehicle, int days) where T : Vehicle;
     }
 }

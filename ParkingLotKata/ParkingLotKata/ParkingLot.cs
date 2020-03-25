@@ -6,23 +6,22 @@ namespace ParkingLotKata
 {
     public class ParkingLot
     {
-        readonly IEnumerable<IAddDayStrategy> _addDayStrategies;
+        readonly IAddDayStrategyFactory _addDayStrategyFactory;
         readonly IEnumerable<IParkingLotSizeStrategy> _sizeStrategies;
 
-        public ParkingLot(int spaces, IEnumerable<IAddDayStrategy> addDayStrategies, IEnumerable<IParkingLotSizeStrategy> sizeStrategies)
+        public ParkingLot(int spaces, IAddDayStrategyFactory addDayStrategyFactory, IEnumerable<IParkingLotSizeStrategy> sizeStrategies)
         {
-            _addDayStrategies = addDayStrategies;
             Spaces = spaces;
+            _addDayStrategyFactory = addDayStrategyFactory;
             _sizeStrategies = sizeStrategies;
         }
 
-        public void AddDay(Vehicle vehicle, int days = 1)
+        public void AddDay<T>(T vehicle, int days = 1) where T : Vehicle
         {
             if (Spaces < 1) return;
 
-            var addDayStrategy = _addDayStrategies
-                .First(x => x.CanExecute(vehicle, days));
-
+            var addDayStrategy = _addDayStrategyFactory.Create(vehicle, days);
+            
             addDayStrategy
                 .Execute(vehicle, days);
         }

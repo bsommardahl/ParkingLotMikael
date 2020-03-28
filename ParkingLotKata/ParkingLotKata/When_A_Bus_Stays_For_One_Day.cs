@@ -3,7 +3,7 @@ using Xunit;
 
 namespace ParkingLotKata
 {
-    public class When_A_Bus_Stays_For_One_Day: given_a_parking_lot
+    public class When_A_Bus_Stays_For_One_Day : given_a_parking_lot
     {
         readonly Driver _driver;
         readonly Vehicle _vehicle;
@@ -38,6 +38,19 @@ namespace ParkingLotKata
             _parkingLot.Park(_vehicle);
             //Assert
             _parkingLot.Spaces.Should().Be(48);
+        }
+
+        [Fact]
+        public void For_One_Day_Electric_Vehicle_Should_Be_Charged_4_50_Dollar()
+        {
+            //Arrange
+            _driver.AddMoney(100);
+
+            //Act
+            _parkingLot.AddDay(_electricVehicle);
+
+            //Assert
+            _driver.Wallet.Should().Be(97.50);
         }
 
         [Fact]

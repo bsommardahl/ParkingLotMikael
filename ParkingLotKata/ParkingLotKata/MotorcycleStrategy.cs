@@ -1,6 +1,6 @@
 namespace ParkingLotKata
 {
-    public class DefaultMoto : IAddDayStrategy<Motorcycle>
+    public class MotorcycleStrategy : IAddDayStrategy<Motorcycle>
     {
         public void Execute(Motorcycle vehicle, int days)
         {

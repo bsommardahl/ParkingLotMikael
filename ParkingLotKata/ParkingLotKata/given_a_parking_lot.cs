@@ -14,15 +14,11 @@ namespace ParkingLotKata
         {
             _addDayStrategies = new List<IAddDayStrategy>
             {
-                new ElectricCarStrategy(),
-                new ElectricBusStrategy(),
-                new TrumpCarStrategy(),
-                new HeliStrategy(),
+                new CarStrategy(),
+                new HelicopterStrategy(),
                 new BusStrategy(),
-                new LongTermCarStrategy(),
-                new DefaultCar(),
-                new DefaultMoto(),
-                new DefaultHeli()
+                new MotorcycleStrategy(),
+
             };
             _sizeStrategies = new List<IParkingLotSizeStrategy>
             {
@@ -49,11 +45,20 @@ namespace ParkingLotKata
 
         public IAddDayStrategy<T> Create<T>(T vehicle, int days) where T : Vehicle
         {
-            var strategy = _addDayStrategies.First(x =>
-                x.GetType().GetInterfaces()
-                    .Any(i => i.GetGenericArguments().All(a => a.Name == vehicle.GetType().Name)));
+            //var strategy = _addDayStrategies.First(x =>
+            //    x.GetType().GetInterfaces()
+            //      .Any(i => i.GetGenericArguments().All(a => a.Name == vehicle.GetType().Name)));
 
-            return (IAddDayStrategy<T>)strategy;
+            foreach (var strategy in _addDayStrategies)
+            {
+                var test = strategy.GetType().GetInterfaces().SelectMany(a => a.GenericTypeArguments.Any(x => x.Name.ToString() == vehicle.GetType().Name));
+
+
+            }
+
+            return null;
+
+            //return (IAddDayStrategy<T>)strategy;
         }
     }
 

@@ -14,7 +14,7 @@ namespace ParkingLotKata
             _driver = new Driver();
             _moto = new Motorcycle(_driver);
             
-            _sut = new DefaultMoto();
+            _sut = new MotorcycleStrategy();
         }
 
         [Fact]

@@ -1,132 +1,86 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.ComponentModel.Design;
 using FluentAssertions;
+using Moq;
+using ParkingLotKata2;
 using Xunit;
 
 namespace XUnitTestProject1
 {
-    public class When_a_Vehicle_Parks_In_A_Parking_Lot
+    public class when_parking_lot_is_full
     {
-        private Car _car;
-        private ParkingLot _parkingLot;
-        private List<IParkingLotSizeStrategy> _strategies;
-
-        public When_a_Vehicle_Parks_In_A_Parking_Lot()
-        {
-            _parkingLot = new ParkingLot(50);
-            _car = new Car(new Driver());
-            _strategies = new List<IParkingLotSizeStrategy>
-           {
-               new CarSizeStrategy()
-           };
-        }
         [Fact]
-        public void A_Car_Should_Take_One_Space()
+        public void should_reject_new_vehicles()
         {
             //Arrange
-            var factory = new ParkingLotSizeStrategyFactory(_strategies);
-            var strategy = factory.Create(_car) as IParkingLotSizeStrategy<Car>;
+            var sut = new ParkingLot(0,0);
+            var vehicle = Mock.Of<IVehicle>();
+            
             //Act
-            strategy?.Execute(_parkingLot);
+            Action act = () => sut.ParkVehicle(vehicle);
 
             //Assert
-            _parkingLot.Spaces.Should().Be(49);
-
+            act.Should().Throw<NoMoreSpaceException>();
         }
+
+    }
+
+    public class when_parking_lot_has_enough_space
+    {
         [Fact]
-        public void If_only_One_Space_Left_and_A_Car_Park_No_More_Spaces()
+        public void should_allow_the_car_to_park()
         {
             //Arrange
-            _parkingLot.RemoveSpaces(49);
-            var factory = new ParkingLotSizeStrategyFactory(_strategies);
-            var strategy = factory.Create(_car) as IParkingLotSizeStrategy<Car>;
+            var metersPerSpace = 2;
+            var spaces = 10;
+            var sut = new ParkingLot(spaces, metersPerSpace);
+            var vehicle = Mock.Of<IVehicle>();
+            Mock.Get(vehicle).SetupGet(x => x.Length).Returns(metersPerSpace);
+
             //Act
-            strategy?.Execute(_parkingLot);
+            sut.ParkVehicle(vehicle);
 
             //Assert
-            _parkingLot.Spaces.Should().Be(0);
-
+            sut.Spaces.Should().Be(9);
         }
 
+    }
+
+    public class when_withdrawing_the_cost_for_a_car
+    {
         [Fact]
-        public void If_No_Spaces_Left_Should_Reject_Vehicle()
+        public void should_withdraw_the_car_cost()
         {
             //Arrange
-            _parkingLot.RemoveSpaces(50);
-            var factory = new ParkingLotSizeStrategyFactory(_strategies);
-            var strategy = factory.Create(_car) as IParkingLotSizeStrategy<Car>;
+            var sut = new CarCostWithdrawalStrategy();
+            var driver = Mock.Of<IDriver>();
+            var vehicle = new Car(driver);
+            
             //Act
-            strategy?.Execute(_parkingLot);
+            sut.Execute(vehicle);
 
             //Assert
-            _parkingLot.Spaces.Should().Be(0);
-            Exception ex = Assert.Throws<ArgumentOutOfRangeException>(() => strategy?.Execute(_parkingLot));
-
+            Mock.Get(driver).Verify(x => x.Withdraw(5));
         }
-    }
-
-
-
-    public class ParkingLotSizeStrategyFactory
-    {
-        private readonly List<IParkingLotSizeStrategy> _strategies;
-
-        public ParkingLotSizeStrategyFactory(List<IParkingLotSizeStrategy> strategies)
-        {
-            _strategies = strategies;
-        }
-
-        public IParkingLotSizeStrategy Create(Vehicle vehicle)
-        {
-            foreach (var strategy in _strategies)
-            {
-                var interfaces = strategy.GetType().GetInterfaces();
-                var typeses = interfaces.SelectMany(x => x.GenericTypeArguments);
-                var strategyType = typeses.First();
-
-                if (strategyType == vehicle.GetType())
-                {
-                    return strategy;
-                }
-            }
-
-            return null;
-        }
-    }
-
-    public class CarSizeStrategy : IParkingLotSizeStrategy<Car>
-    {
-        public void Execute(ParkingLot lot)
-        {
-            lot.Spaces -= 1;
-        }
-    }
-
-    public interface IParkingLotSizeStrategy
-    {
 
     }
 
-    public interface IParkingLotSizeStrategy<in T> : IParkingLotSizeStrategy where T : Vehicle
+    public class when_withdrawing_cost_for_a_bus
     {
-        void Execute(ParkingLot lot);
-    }
-
-    public class ParkingLot
-    {
-
-
-        public ParkingLot(int spaces)
+        [Fact]
+        public void should_withdraw_the_amount_for_a_bus()
         {
-            Spaces = spaces;
+            //Arrange
+            var sut = new BusCostWithdrawalStrategy() as IVehicleCostWithdrawalStrategy<Bus>;
+            var driver = Mock.Of<IDriver>();
+
+            //Act
+            sut.Execute(new Bus(driver));
+
+            //Assert
+            Mock.Get(driver).Verify(x=> x.Withdraw(9));
         }
 
-        public int Spaces { get; set; }
-
-        public void RemoveSpaces(int spaces)
-        {
-            Spaces -= spaces;
-        }
     }
 }

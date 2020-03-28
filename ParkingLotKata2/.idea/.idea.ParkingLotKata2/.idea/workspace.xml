@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4d329191-c141-4d06-b953-584ded39c913" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IVehicleCostWithdrawalStrategyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Car.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Vehicle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IVehicleCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Driver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/VehicleCostWithdrawal/with_valid_vehicle_type.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/VehicleCostWithdrawal/with_invalid_vehicle_type.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IDriver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IVehicle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/BusCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/When_a_Vehicle_Parks_In_A_Parking_Lot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/CarCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/XUnitTestProject1/IVehicleStrategy.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/IParkingLotSizeStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/VehicleCostCalculationStrategyFactory.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/CarCostWithdrawalStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicleCostWithdrawalStrategyFactory.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/When_a_Car_Parks.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/when_creating_a_strategy_for_vehicle_cost_withdrawal.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/VehicleCostWithdrawal/when_creating_a_strategy_for_vehicle_cost_withdrawal.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/Car.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/Driver.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/BusCostWithdrawalStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicle.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/Vehicle.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/IParkingLotSizeStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/CarSizeStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/When_a_Vehicle_Parks_In_A_Parking_Lot.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1ZlUZYVDf0s296wb9gaW9Oq75Wj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="RiderCSharpLiveTemplatesSettingsId" />
+  </component>
+  <component name="RunManager" selected=".NET Project.ParkingLotKata2">
+    <configuration name="ParkingLotKata2" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/ParkingLotKata2/ParkingLotKata2.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4d329191-c141-4d06-b953-584ded39c913" name="Default Changelist" comment="" />
+      <created>1585413230018</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1585413230018</updated>
+      <workItem from="1585413235285" duration="3547000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="163" y="46" key="SettingsEditor" timestamp="1585415233494">
+      <screen x="0" y="0" width="1348" height="823" />
+    </state>
+    <state x="163" y="46" key="SettingsEditor/0.0.1348.823@0.0.1348.823" timestamp="1585415233494" />
+  </component>
+</project>

@@ -5,25 +5,25 @@ namespace ParkingLotKata2
         readonly int _metersPerSpace;
 
 
-        public ParkingLot(int spaces, int metersPerSpace)
+        public ParkingLot(double spaces, int metersPerSpace)
         {
             _metersPerSpace = metersPerSpace;
             Spaces = spaces;
         }
 
-        public int Spaces { get; private set; }
+        public double Spaces { get; private set; }
 
-        public void RemoveSpaces(int spaces)
+        public void RemoveSpaces(double spaces)
         {
             Spaces -= spaces;
         }
 
         public void ParkVehicle(IVehicle vehicle)
         {
-            if (Spaces == 0 || vehicle.Length < 1 || _metersPerSpace / vehicle.Length > Spaces)
+            if (Spaces == 0 || vehicle.Length < 1 || vehicle.Length / _metersPerSpace > Spaces)
                 throw new NoMoreSpaceException();
 
-            RemoveSpaces(_metersPerSpace / vehicle.Length);
+            RemoveSpaces(vehicle.Length / _metersPerSpace);
         }
     }
 }

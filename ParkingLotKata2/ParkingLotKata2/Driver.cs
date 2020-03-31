@@ -9,7 +9,7 @@ namespace ParkingLotKata2
             Wallet += money;
         }
 
-        public void Withdraw(int money)
+        public void Withdraw(double money)
         {
             Wallet -= money;
         }

@@ -1,11 +1,20 @@
 namespace ParkingLotKata2
 {
-    public class CarCostWithdrawalStrategy : IVehicleCostWithdrawalStrategy<Car>
+    public class CarCostWithdrawalStrategy : DiscountWithdrawalStrategy, IVehicleCostWithdrawalStrategy<Car>
     {
-        public void Execute(Car vehicle)
+        public void Execute(Car vehicle, int days)
         {
-            const int basePrice = 5;
-            vehicle.Driver.Withdraw(basePrice);
+            const double basePrice = 5;
+            var computedPrice = basePrice * days;
+            if (vehicle.HasTrumpSticker)
+            {
+                computedPrice = basePrice * 2;
+            }
+            if (days >= 3)
+            {
+                computedPrice = Discount(days, computedPrice);
+            }
+            vehicle.Driver.Withdraw(computedPrice);
         }
     }
 }

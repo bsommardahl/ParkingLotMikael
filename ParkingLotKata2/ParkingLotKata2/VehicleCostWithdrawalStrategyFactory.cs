@@ -16,9 +16,10 @@ namespace ParkingLotKata2
 
         public IVehicleCostCalculationStrategy Create(Vehicle vehicle)
         {
+
             foreach (var strategy in _vehicleStrategies)
             {
-                var strategyType = strategy.GetType().GetInterfaces().Select(x => x.GenericTypeArguments).First()
+                var strategyType = strategy.GetType().GetInterfaces().SelectMany(x => x.GenericTypeArguments)
                     .First();
 
                 if (strategyType == vehicle.GetType()) return strategy;

@@ -1,20 +1,16 @@
-using System.Reflection.Metadata.Ecma335;
-
 namespace ParkingLotKata2
 {
-    public class BusCostWithdrawalStrategy : DiscountWithdrawalStrategy, IVehicleCostWithdrawalStrategy<Bus>
+    public class HelicopterCostWithdrawalStrategy : DiscountWithdrawalStrategy, IVehicleCostWithdrawalStrategy<Helicopter>
     {
-        public void Execute(Bus vehicle, int days)
+        public void Execute(Helicopter vehicle, int days)
         {
-            const double basePrice = 9;
+            const double basePrice = 35;
             var computedPrice = basePrice * days;
             if (days >= 3)
             {
                 computedPrice = Discount(days, computedPrice);
             }
-
             vehicle.Driver.Withdraw(computedPrice);
         }
-
     }
 }

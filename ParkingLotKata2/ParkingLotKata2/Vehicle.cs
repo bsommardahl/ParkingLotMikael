@@ -8,6 +8,7 @@ namespace ParkingLotKata2
         }
 
         public IDriver Driver { get; }
-        public int Length { get; }
+        public double Length { get; }
+
     }
 }

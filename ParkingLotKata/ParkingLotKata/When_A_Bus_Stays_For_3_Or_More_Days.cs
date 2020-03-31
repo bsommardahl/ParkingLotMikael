@@ -28,4 +28,5 @@ namespace ParkingLotKata
             _driver.Wallet.Should().Be(71.2);
         }
     }
+
 }

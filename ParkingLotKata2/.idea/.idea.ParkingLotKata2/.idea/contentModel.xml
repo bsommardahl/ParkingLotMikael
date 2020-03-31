@@ -16,11 +16,19 @@
         <e p="BusCostWithdrawalStrategy.cs" t="Include" />
         <e p="Car.cs" t="Include" />
         <e p="CarCostWithdrawalStrategy.cs" t="Include" />
+        <e p="DiscountWithdrawalStrategy.cs" t="Include" />
         <e p="Driver.cs" t="Include" />
+        <e p="ElectricCar.cs" t="Include" />
+        <e p="ElectricCarCostWithdrawalStrategy.cs" t="Include" />
+        <e p="Helicopter.cs" t="Include" />
+        <e p="HelicopterCostWithdrawalStrategy.cs" t="Include" />
+        <e p="IDiscountWithdrawalStrategy.cs" t="Include" />
         <e p="IDriver.cs" t="Include" />
         <e p="IVehicle.cs" t="Include" />
         <e p="IVehicleCostWithdrawalStrategy.cs" t="Include" />
         <e p="IVehicleCostWithdrawalStrategyFactory.cs" t="Include" />
+        <e p="MotorCycle.cs" t="Include" />
+        <e p="MotorCycleCostWithdrawalStrategy.cs" t="Include" />
         <e p="NoMatchingVehicleCostWithdrawalStrategyException.cs" t="Include" />
         <e p="NoMoreSpaceException.cs" t="Include" />
         <e p="ParkingLot.cs" t="Include" />
@@ -43,7 +51,6 @@
           <e p="with_invalid_vehicle_type.cs" t="Include" />
           <e p="with_valid_vehicle_type.cs" t="Include" />
         </e>
-        <e p="When_a_Vehicle_Parks_In_A_Parking_Lot.cs" t="Include" />
         <e p="XUnitTestProject1.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -52,6 +59,23 @@
               <e p="XUnitTestProject1.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="when_discounting_long_term_parking" t="Include">
+          <e p="when_vehicle_has_stayed_for_3_or_more_days.cs" t="Include" />
+          <e p="when_vehicle_has_stayed_for_6_or_more_days.cs" t="Include" />
+        </e>
+        <e p="when_parking" t="Include">
+          <e p="when_parking_lot_has_enough_space.cs" t="Include" />
+          <e p="when_parking_lot_is_full.cs" t="Include" />
+        </e>
+        <e p="when_unparking" t="Include" />
+        <e p="when_withdrawing_the_cost" t="Include">
+          <e p="when_withdrawing_cost_for_a_bus.cs" t="Include" />
+          <e p="when_withdrawing_cost_for_a_motorcycle.cs" t="Include" />
+          <e p="when_withdrawing_the_cost_for_a_car.cs" t="Include" />
+          <e p="when_withdrawing_the_cost_for_a_car_with_trump_sticker.cs" t="Include" />
+          <e p="when_withdrawing_the_cost_for_a_electric_car.cs" t="Include" />
+          <e p="when_withdrawing_the_cost_of_a_helicopter.cs" t="Include" />
         </e>
       </e>
       <e p="packages" t="ExcludeRecursive" />

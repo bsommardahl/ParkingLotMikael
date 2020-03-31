@@ -8,10 +8,7 @@ namespace ParkingLotKata2
         {
             const double basePrice = 9;
             var computedPrice = basePrice * days;
-            if (days >= 3)
-            {
-                computedPrice = Discount(days, computedPrice);
-            }
+           
 
             vehicle.Driver.Withdraw(computedPrice);
         }

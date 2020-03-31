@@ -10,10 +10,7 @@ namespace ParkingLotKata2
             {
                 computedPrice = basePrice * 2;
             }
-            if (days >= 3)
-            {
-                computedPrice = Discount(days, computedPrice);
-            }
+           
             vehicle.Driver.Withdraw(computedPrice);
         }
     }

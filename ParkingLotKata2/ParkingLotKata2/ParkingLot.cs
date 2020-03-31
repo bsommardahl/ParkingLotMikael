@@ -13,17 +13,29 @@ namespace ParkingLotKata2
 
         public double Spaces { get; private set; }
 
-        public void RemoveSpaces(double spaces)
-        {
-            Spaces -= spaces;
-        }
-
         public void ParkVehicle(IVehicle vehicle)
         {
-            if (Spaces == 0 || vehicle.Length < 1 || vehicle.Length / _metersPerSpace > Spaces)
+            if (Spaces == 0 || vehicle.Length < 1 || GetSpaces(vehicle) > Spaces)
                 throw new NoMoreSpaceException();
 
-            RemoveSpaces(vehicle.Length / _metersPerSpace);
+            Spaces -= GetSpaces(vehicle);
         }
+
+        double GetSpaces(IVehicle vehicle)
+        {
+            return vehicle.Length / _metersPerSpace;
+        }
+
+
+        public void UnparkVehicle(IVehicle vehicle, int days)
+        {
+
+            Spaces += GetSpaces(vehicle);
+            //increase spaces
+            //charge the driver
+//apply discount
+        }
+
+        
     }
 }

@@ -1,6 +1,6 @@
 namespace ParkingLotKata2
 {
-    public class ElectricCarCostWithdrawalStrategy : DiscountWithdrawalStrategy, IVehicleCostWithdrawalStrategy<ElectricCar>
+    public class ElectricCarCostWithdrawalStrategy : IVehicleCostWithdrawalStrategy<ElectricCar>
     {
 
         public void Execute(ElectricCar vehicle, int days)
@@ -8,10 +8,7 @@ namespace ParkingLotKata2
             const double basePrice = 2.50;
             var computedPrice = basePrice * days;
 
-            if (days >= 3)
-            {
-                computedPrice = Discount(days, computedPrice);
-            }
+           
             vehicle.Driver.Withdraw(computedPrice);
         }
     }

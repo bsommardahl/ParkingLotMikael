@@ -15,12 +15,21 @@
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Driver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/NoMatchingVehicleCostWithdrawalStrategyException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/VehicleCostWithdrawal/with_valid_vehicle_type.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/VehicleCostWithdrawal/with_invalid_vehicle_type.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IDriver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IVehicle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/MotorCycleCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/BusCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/When_a_Vehicle_Parks_In_A_Parking_Lot.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ElectricCarCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/HelicopterCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IDiscountWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/DiscountWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_is_full.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_has_enough_space.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_3_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_6_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/CarCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -29,7 +38,6 @@
         <option value="$PROJECT_DIR$/XUnitTestProject1/IVehicleStrategy.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/IParkingLotSizeStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/VehicleCostCalculationStrategyFactory.cs" />
-        <option value="$PROJECT_DIR$/ParkingLotKata2/CarCostWithdrawalStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicleCostWithdrawalStrategyFactory.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/When_a_Car_Parks.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/when_creating_a_strategy_for_vehicle_cost_withdrawal.cs" />
@@ -37,13 +45,22 @@
         <option value="$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/Car.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/Driver.cs" />
-        <option value="$PROJECT_DIR$/ParkingLotKata2/BusCostWithdrawalStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicle.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/Vehicle.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/IParkingLotSizeStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/CarSizeStrategy.cs" />
-        <option value="$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/When_a_Vehicle_Parks_In_A_Parking_Lot.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/BusCostWithdrawalStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/CarCostWithdrawalStrategy.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/when_parking_lot_is_full.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/when_vehicle_has_stayed_for_3_or_more_days.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/when_vehicle_has_stayed_for_6_or_more_days.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_6_or_more_days.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/ElectricCarCostWithdrawalStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/HelicopterCostWithdrawalStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/MotorCycleCostWithdrawalStrategy.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_is_full.cs" />
       </list>
     </option>
   </component>
@@ -67,7 +84,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="RiderCSharpLiveTemplatesSettingsId" />
   </component>
-  <component name="RunManager" selected=".NET Project.ParkingLotKata2">
+  <component name="RunManager">
     <configuration name="ParkingLotKata2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -106,5 +123,9 @@
       <screen x="0" y="0" width="1348" height="823" />
     </state>
     <state x="163" y="46" key="SettingsEditor/0.0.1348.823@0.0.1348.823" timestamp="1585415233494" />
+    <state x="370" y="137" width="672" height="678" key="search.everywhere.popup" timestamp="1585666182344">
+      <screen x="0" y="0" width="1414" height="816" />
+    </state>
+    <state x="370" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1414.816@0.0.1414.816" timestamp="1585666182344" />
   </component>
 </project>

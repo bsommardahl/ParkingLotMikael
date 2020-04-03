@@ -12,7 +12,6 @@ namespace XUnitTestProject1
         {
             //Arrange
             var metersPerSpace = 2;
-            var spaces = 10;
             var vehicle = Mock.Of<IVehicle>();
             Mock.Get(vehicle).SetupGet(x => x.Length).Returns(metersPerSpace);
 
@@ -20,16 +19,14 @@ namespace XUnitTestProject1
             Sut.ParkVehicle(vehicle);
 
             //Assert
-            Sut.Spaces.Should().Be(9);
+            Sut.Spaces.Should().Be(99);
         }
 
         [Fact]
         public void should_take_two_spaces_if_bus()
         {
             //Arrange
-            var metersPerSpace = 2;
             var vehicleLength = 4;
-            var spaces = 10;
             var vehicle = Mock.Of<IVehicle>();
             Mock.Get(vehicle).SetupGet(x => x.Length).Returns(vehicleLength);
 
@@ -37,16 +34,14 @@ namespace XUnitTestProject1
             Sut.ParkVehicle(vehicle);
 
             //Assert
-            Sut.Spaces.Should().Be(8);
+            Sut.Spaces.Should().Be(98);
         }
 
         [Fact]
         public void should_take_half_a_spaces_if_motorcycle()
         {
             //Arrange
-            var metersPerSpace = 2;
             var vehicleLength = 1;
-            var spaces = 10;
             var vehicle = Mock.Of<IVehicle>();
             Mock.Get(vehicle).SetupGet(x => x.Length).Returns(vehicleLength);
 
@@ -54,16 +49,15 @@ namespace XUnitTestProject1
             Sut.ParkVehicle(vehicle);
 
             //Assert
-            Sut.Spaces.Should().Be(9.5);
+            Sut.Spaces.Should().Be(99.5);
         }
 
         [Fact]
         public void should_take_eight_spaces_if_helicopter()
         {
             //Arrange
-            var metersPerSpace = 2;
             var vehicleLength = 16;
-            var spaces = 10;
+
             var vehicle = Mock.Of<IVehicle>();
             Mock.Get(vehicle).SetupGet(x => x.Length).Returns(vehicleLength);
 
@@ -71,7 +65,7 @@ namespace XUnitTestProject1
             Sut.ParkVehicle(vehicle);
 
             //Assert
-            Sut.Spaces.Should().Be(2);
+            Sut.Spaces.Should().Be(92);
         }
     }
 }

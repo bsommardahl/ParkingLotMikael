@@ -1,6 +1,6 @@
 namespace ParkingLotKata2
 {
-    public class DiscountWithdrawalStrategy : IDiscountWithdrawalStrategy
+    public class LongTermDiscounter : ILongTermDiscounter
     {
         public double Discount(int days, double charge)
         {

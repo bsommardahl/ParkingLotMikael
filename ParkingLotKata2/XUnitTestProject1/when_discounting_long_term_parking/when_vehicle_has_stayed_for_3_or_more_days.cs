@@ -11,7 +11,7 @@ namespace XUnitTestProject1
         public void should_get_20_precent_discount_on_cost()
         {
             //Arrange
-            var sut = new DiscountWithdrawalStrategy() as IDiscountWithdrawalStrategy;
+            var sut = new LongTermDiscounter() as ILongTermDiscounter;
             
             //Act
             var discountedAmount = sut.Discount(4, 10.0);

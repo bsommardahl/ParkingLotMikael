@@ -10,12 +10,19 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IVehicleCostWithdrawalStrategyFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Car.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ILongTermDiscounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Vehicle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/LongTermDiscounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IVehicleCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Driver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_is_full.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_has_enough_space.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_withdrawing_the_cost/when_withdrawing_the_cost_for_a_car.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/NoMatchingVehicleCostWithdrawalStrategyException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_3_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_6_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/VehicleCostWithdrawal/with_valid_vehicle_type.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/VehicleCostWithdrawal/with_invalid_vehicle_type.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IDriver.cs" root0="FORCE_HIGHLIGHTING" />
@@ -24,12 +31,6 @@
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/BusCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ElectricCarCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/HelicopterCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IDiscountWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/DiscountWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_is_full.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_has_enough_space.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_3_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_6_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/CarCostWithdrawalStrategy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -38,11 +39,9 @@
         <option value="$PROJECT_DIR$/XUnitTestProject1/IVehicleStrategy.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/IParkingLotSizeStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/VehicleCostCalculationStrategyFactory.cs" />
-        <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicleCostWithdrawalStrategyFactory.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/When_a_Car_Parks.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/when_creating_a_strategy_for_vehicle_cost_withdrawal.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/VehicleCostWithdrawal/when_creating_a_strategy_for_vehicle_cost_withdrawal.cs" />
-        <option value="$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/Car.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/Driver.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicle.cs" />
@@ -59,8 +58,14 @@
         <option value="$PROJECT_DIR$/ParkingLotKata2/ElectricCarCostWithdrawalStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/HelicopterCostWithdrawalStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/MotorCycleCostWithdrawalStrategy.cs" />
-        <option value="$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_3_or_more_days.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_has_enough_space.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicleCostWithdrawalStrategy.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_is_full.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/NoMatchingVehicleCostWithdrawalStrategyException.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicleCostWithdrawalStrategyFactory.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs" />
       </list>
     </option>
   </component>
@@ -84,7 +89,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="RiderCSharpLiveTemplatesSettingsId" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected=".NET Project.ParkingLotKata2">
     <configuration name="ParkingLotKata2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -112,6 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585413230018</updated>
       <workItem from="1585413235285" duration="3547000" />
+      <workItem from="1585923848300" duration="1929000" />
     </task>
     <servers />
   </component>

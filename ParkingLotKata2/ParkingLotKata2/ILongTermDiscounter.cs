@@ -1,6 +1,6 @@
 namespace ParkingLotKata2
 {
-    public interface IDiscountWithdrawalStrategy
+    public interface ILongTermDiscounter
     {
         double Discount(int days, double charge);
 

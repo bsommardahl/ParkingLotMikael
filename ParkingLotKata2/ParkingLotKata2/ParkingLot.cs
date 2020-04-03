@@ -3,11 +3,16 @@ namespace ParkingLotKata2
     public class ParkingLot
     {
         readonly int _metersPerSpace;
+        readonly ILongTermDiscounter _longTermDiscounter;
+        readonly IVehicleCostWithdrawalStrategyFactory _vehicleCostWithdrawalStrategyFactory;
 
 
-        public ParkingLot(double spaces, int metersPerSpace)
+        public ParkingLot(int spaces, int metersPerSpace, ILongTermDiscounter longTermDiscounter,
+            IVehicleCostWithdrawalStrategyFactory vehicleCostWithdrawalStrategyFactory)
         {
             _metersPerSpace = metersPerSpace;
+            _longTermDiscounter = longTermDiscounter;
+            _vehicleCostWithdrawalStrategyFactory = vehicleCostWithdrawalStrategyFactory;
             Spaces = spaces;
         }
 
@@ -29,13 +34,12 @@ namespace ParkingLotKata2
 
         public void UnparkVehicle(IVehicle vehicle, int days)
         {
-
             Spaces += GetSpaces(vehicle);
-            //increase spaces
-            //charge the driver
-//apply discount
-        }
+            var factory = _vehicleCostWithdrawalStrategyFactory.Create(vehicle);
+            factory.Execute(vehicle, days);
+            //apply discount
+            ////charge the driver
 
-        
+        }
     }
 }

@@ -2,6 +2,6 @@ namespace ParkingLotKata2
 {
     public interface IVehicleCostWithdrawalStrategyFactory
     {
-        IVehicleCostCalculationStrategy Create(Vehicle vehicle);
+        IVehicleCostWithdrawalStrategy<T> Create<T>(T vehicle) where T:IVehicle;
     }
 }

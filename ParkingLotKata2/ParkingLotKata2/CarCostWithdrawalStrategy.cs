@@ -1,6 +1,6 @@
 namespace ParkingLotKata2
 {
-    public class CarCostWithdrawalStrategy : DiscountWithdrawalStrategy, IVehicleCostWithdrawalStrategy<Car>
+    public class CarCostWithdrawalStrategy : LongTermDiscounter, IVehicleCostWithdrawalStrategy<Car>
     {
         public void Execute(Car vehicle, int days)
         {

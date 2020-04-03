@@ -16,17 +16,17 @@
         <e p="BusCostWithdrawalStrategy.cs" t="Include" />
         <e p="Car.cs" t="Include" />
         <e p="CarCostWithdrawalStrategy.cs" t="Include" />
-        <e p="DiscountWithdrawalStrategy.cs" t="Include" />
         <e p="Driver.cs" t="Include" />
         <e p="ElectricCar.cs" t="Include" />
         <e p="ElectricCarCostWithdrawalStrategy.cs" t="Include" />
         <e p="Helicopter.cs" t="Include" />
         <e p="HelicopterCostWithdrawalStrategy.cs" t="Include" />
-        <e p="IDiscountWithdrawalStrategy.cs" t="Include" />
         <e p="IDriver.cs" t="Include" />
+        <e p="ILongTermDiscounter.cs" t="Include" />
         <e p="IVehicle.cs" t="Include" />
         <e p="IVehicleCostWithdrawalStrategy.cs" t="Include" />
         <e p="IVehicleCostWithdrawalStrategyFactory.cs" t="Include" />
+        <e p="LongTermDiscounter.cs" t="Include" />
         <e p="MotorCycle.cs" t="Include" />
         <e p="MotorCycleCostWithdrawalStrategy.cs" t="Include" />
         <e p="NoMatchingVehicleCostWithdrawalStrategyException.cs" t="Include" />

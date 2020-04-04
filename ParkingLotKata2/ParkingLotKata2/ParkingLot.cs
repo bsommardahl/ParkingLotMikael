@@ -35,11 +35,18 @@ namespace ParkingLotKata2
         public void UnparkVehicle(IVehicle vehicle, int days)
         {
             Spaces += GetSpaces(vehicle);
-            var factory = _vehicleCostWithdrawalStrategyFactory.Create(vehicle);
-            factory.Execute(vehicle, days);
-            //apply discount
-            ////charge the driver
 
+            var amount = GetTheAmount(vehicle, days);
+            var discountedAmount = _longTermDiscounter.Discount(days, amount);
+            vehicle.Driver.Withdraw(discountedAmount);
+
+        }
+
+        private double GetTheAmount(IVehicle vehicle, int days)
+        {
+            var strategy = _vehicleCostWithdrawalStrategyFactory.Create(vehicle);
+            var amount = strategy.Execute(vehicle, days);
+            return amount;
         }
     }
 }

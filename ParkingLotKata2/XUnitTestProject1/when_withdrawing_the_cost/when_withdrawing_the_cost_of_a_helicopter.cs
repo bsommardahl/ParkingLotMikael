@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Moq;
 using ParkingLotKata2;
 using Xunit;
@@ -14,10 +15,10 @@ namespace XUnitTestProject1
             var driver = Mock.Of<IDriver>();
 
             //Act
-            sut.Execute(new Helicopter(driver), 1);
+            var amount = sut.Execute(new Helicopter(driver), 1);
 
             //Assert
-            Mock.Get(driver).Verify(x => x.Withdraw(35));
+            amount.Should().Be(35);
         }
 
     }

@@ -5,7 +5,7 @@ namespace ParkingLotKata2
     }
     public interface IVehicleCostWithdrawalStrategy<in T> : IVehicleCostCalculationStrategy where T : IVehicle
     {
-        void Execute(T vehicle, int days);
+        double Execute(T vehicle, int days);
     }
 
 }

@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Moq;
 using ParkingLotKata2;
 using Xunit;
@@ -15,10 +16,10 @@ namespace XUnitTestProject1
             var vehicle = new Car(driver, true);
 
             //Act
-            sut.Execute(vehicle, 1);
+            var amount = sut.Execute(vehicle, 1);
 
             //Assert
-            Mock.Get(driver).Verify(x => x.Withdraw(10));
+            amount.Should().Be(10);
         }
 
     }

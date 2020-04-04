@@ -9,7 +9,7 @@ namespace XUnitTestProject1
     public abstract class given_a_parking_lot
     {
         protected readonly ParkingLot Sut;
-        readonly ILongTermDiscounter _longTermDiscounter;
+        protected readonly ILongTermDiscounter _longTermDiscounter;
         protected readonly IVehicleCostWithdrawalStrategyFactory _vehicleCostWithdrawalStrategyFactory;
         protected readonly int _spacesBeforeUnpark;
 
@@ -29,8 +29,10 @@ namespace XUnitTestProject1
         readonly IVehicle _vehicle;
         readonly int _days;
         IDriver _driver;
-        int _charge;
+
         IVehicleCostWithdrawalStrategy<IVehicle> _vehicleCostWithdrawalStrategy;
+        private int _chargeAmount;
+        private int _discountedAmount;
 
         public when_unparking_a_vehicle()
         {
@@ -46,6 +48,12 @@ namespace XUnitTestProject1
             Mock.Get(_vehicleCostWithdrawalStrategyFactory).Setup(x => x.Create(_vehicle))
                 .Returns(_vehicleCostWithdrawalStrategy);
 
+            _chargeAmount = 10;
+            Mock.Get(_vehicleCostWithdrawalStrategy)
+                .Setup(x => x.Execute(_vehicle, _days)).Returns(_chargeAmount);
+
+            _discountedAmount = 1000;
+            Mock.Get(_longTermDiscounter).Setup(x => x.Discount(_days, _chargeAmount)).Returns(_discountedAmount);
 
             //Act
             Sut.UnparkVehicle(_vehicle, _days);
@@ -62,25 +70,25 @@ namespace XUnitTestProject1
         public void should_charge_the_driver()
         {
             //Assert
-            Mock.Get(_vehicleCostWithdrawalStrategy)
-                .Verify(x => x.Execute(_vehicle, _days));
+            Mock.Get(_driver).Verify(x => x.Withdraw(_discountedAmount));
         }
-    }
 
 
-    public class when_parking_lot_is_full : given_a_parking_lot
-    {
-        [Fact]
-        public void should_reject_new_vehicles()
+
+        public class when_parking_lot_is_full : given_a_parking_lot
         {
-            //Arrange
-            var vehicle = Mock.Of<IVehicle>();
+            [Fact]
+            public void should_reject_new_vehicles()
+            {
+                //Arrange
+                var vehicle = Mock.Of<IVehicle>();
 
-            //Act
-            Action act = () => Sut.ParkVehicle(vehicle);
+                //Act
+                Action act = () => Sut.ParkVehicle(vehicle);
 
-            //Assert
-            act.Should().Throw<NoMoreSpaceException>();
+                //Assert
+                act.Should().Throw<NoMoreSpaceException>();
+            }
         }
     }
 }

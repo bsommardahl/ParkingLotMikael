@@ -12,6 +12,7 @@ namespace XUnitTestProject1
         protected readonly ILongTermDiscounter _longTermDiscounter;
         protected readonly IVehicleCostWithdrawalStrategyFactory _vehicleCostWithdrawalStrategyFactory;
         protected readonly int _spacesBeforeUnpark;
+        protected ICalculateSpaces _calculateSpaces;
 
         protected given_a_parking_lot()
         {
@@ -19,8 +20,9 @@ namespace XUnitTestProject1
             _spacesBeforeUnpark = 100;
             _longTermDiscounter = A.Fake<ILongTermDiscounter>();
             _vehicleCostWithdrawalStrategyFactory = A.Fake<IVehicleCostWithdrawalStrategyFactory>();
+            _calculateSpaces = A.Fake<ICalculateSpaces>();
             Sut = new ParkingLot(_spacesBeforeUnpark, metersPerSpace, _longTermDiscounter,
-                _vehicleCostWithdrawalStrategyFactory);
+                _vehicleCostWithdrawalStrategyFactory, _calculateSpaces);
         }
     }
 
@@ -52,6 +54,8 @@ namespace XUnitTestProject1
 
             _discountedAmount = 1000;
             A.CallTo(() => _longTermDiscounter.Discount(_days, _chargeAmount)).Returns(_discountedAmount);
+
+            A.CallTo(() => _calculateSpaces.GetSpaces(_vehicle)).Returns(1);
 
             //Act
             Sut.UnparkVehicle(_vehicle, _days);

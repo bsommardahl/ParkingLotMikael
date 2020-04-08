@@ -1,5 +1,5 @@
+using FakeItEasy;
 using FluentAssertions;
-using Moq;
 using ParkingLotKata2;
 using Xunit;
 
@@ -12,8 +12,8 @@ namespace XUnitTestProject1
         {
             //Arrange
             var metersPerSpace = 2;
-            var vehicle = Mock.Of<IVehicle>();
-            Mock.Get(vehicle).SetupGet(x => x.Length).Returns(metersPerSpace);
+            var vehicle = A.Fake<IVehicle>();
+            A.CallTo(() => vehicle.Length).Returns(metersPerSpace);
 
             //Act
             Sut.ParkVehicle(vehicle);
@@ -27,8 +27,8 @@ namespace XUnitTestProject1
         {
             //Arrange
             var vehicleLength = 4;
-            var vehicle = Mock.Of<IVehicle>();
-            Mock.Get(vehicle).SetupGet(x => x.Length).Returns(vehicleLength);
+            var vehicle = A.Fake<IVehicle>();
+            A.CallTo(() => vehicle.Length).Returns(vehicleLength);
 
             //Act
             Sut.ParkVehicle(vehicle);
@@ -42,8 +42,8 @@ namespace XUnitTestProject1
         {
             //Arrange
             var vehicleLength = 1;
-            var vehicle = Mock.Of<IVehicle>();
-            Mock.Get(vehicle).SetupGet(x => x.Length).Returns(vehicleLength);
+            var vehicle = A.Fake<IVehicle>();
+            A.CallTo(() => vehicle.Length).Returns(vehicleLength);
 
             //Act
             Sut.ParkVehicle(vehicle);
@@ -58,8 +58,8 @@ namespace XUnitTestProject1
             //Arrange
             var vehicleLength = 16;
 
-            var vehicle = Mock.Of<IVehicle>();
-            Mock.Get(vehicle).SetupGet(x => x.Length).Returns(vehicleLength);
+            var vehicle = A.Fake<IVehicle>();
+            A.CallTo(() => vehicle.Length).Returns(vehicleLength);
 
             //Act
             Sut.ParkVehicle(vehicle);

@@ -1,6 +1,6 @@
 using System;
+using FakeItEasy;
 using FluentAssertions;
-using Moq;
 using ParkingLotKata2;
 using Xunit;
 
@@ -17,8 +17,8 @@ namespace XUnitTestProject1
         {
             var metersPerSpace = 2;
             _spacesBeforeUnpark = 100;
-            _longTermDiscounter = Mock.Of<ILongTermDiscounter>();
-            _vehicleCostWithdrawalStrategyFactory = Mock.Of<IVehicleCostWithdrawalStrategyFactory>();
+            _longTermDiscounter = A.Fake<ILongTermDiscounter>();
+            _vehicleCostWithdrawalStrategyFactory = A.Fake<IVehicleCostWithdrawalStrategyFactory>();
             Sut = new ParkingLot(_spacesBeforeUnpark, metersPerSpace, _longTermDiscounter,
                 _vehicleCostWithdrawalStrategyFactory);
         }
@@ -39,21 +39,19 @@ namespace XUnitTestProject1
             //Arrange
             var vehicleLength = 2;
             _days = 1;
-            _vehicle = Mock.Of<IVehicle>();
-            _driver = Mock.Of<IDriver>();
-            Mock.Get(_vehicle).SetupGet(x => x.Driver).Returns(_driver);
-            Mock.Get(_vehicle).SetupGet(x => x.Length).Returns(vehicleLength);
+            _vehicle = A.Fake<IVehicle>();
+            _driver = A.Fake<IDriver>();
+            A.CallTo(() => _vehicle.Driver).Returns(_driver);
+            A.CallTo(() => _vehicle.Length).Returns(vehicleLength);
 
-            _vehicleCostWithdrawalStrategy = Mock.Of<IVehicleCostWithdrawalStrategy<IVehicle>>();
-            Mock.Get(_vehicleCostWithdrawalStrategyFactory).Setup(x => x.Create(_vehicle))
-                .Returns(_vehicleCostWithdrawalStrategy);
+            _vehicleCostWithdrawalStrategy = A.Fake<IVehicleCostWithdrawalStrategy<IVehicle>>();
+            A.CallTo(() => _vehicleCostWithdrawalStrategyFactory.Create(_vehicle)).Returns(_vehicleCostWithdrawalStrategy);
 
             _chargeAmount = 10;
-            Mock.Get(_vehicleCostWithdrawalStrategy)
-                .Setup(x => x.Execute(_vehicle, _days)).Returns(_chargeAmount);
+            A.CallTo(() => _vehicleCostWithdrawalStrategy.Execute(_vehicle, _days)).Returns(_chargeAmount);
 
             _discountedAmount = 1000;
-            Mock.Get(_longTermDiscounter).Setup(x => x.Discount(_days, _chargeAmount)).Returns(_discountedAmount);
+            A.CallTo(() => _longTermDiscounter.Discount(_days, _chargeAmount)).Returns(_discountedAmount);
 
             //Act
             Sut.UnparkVehicle(_vehicle, _days);
@@ -70,7 +68,7 @@ namespace XUnitTestProject1
         public void should_charge_the_driver()
         {
             //Assert
-            Mock.Get(_driver).Verify(x => x.Withdraw(_discountedAmount));
+            A.CallTo(() => _driver.Withdraw(_discountedAmount)).MustHaveHappened();
         }
 
 
@@ -81,7 +79,7 @@ namespace XUnitTestProject1
             public void should_reject_new_vehicles()
             {
                 //Arrange
-                var vehicle = Mock.Of<IVehicle>();
+                var vehicle = A.Fake<IVehicle>();
 
                 //Act
                 Action act = () => Sut.ParkVehicle(vehicle);

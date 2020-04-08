@@ -1,5 +1,5 @@
+using FakeItEasy;
 using FluentAssertions;
-using Moq;
 using ParkingLotKata2;
 using Xunit;
 
@@ -12,7 +12,7 @@ namespace XUnitTestProject1
         {
             //Arrange
             var sut = new CarCostWithdrawalStrategy() as IVehicleCostWithdrawalStrategy<Car>;
-            var driver = Mock.Of<IDriver>();
+            var driver = A.Fake<IDriver>();
             var vehicle = new Car(driver, true);
 
             //Act

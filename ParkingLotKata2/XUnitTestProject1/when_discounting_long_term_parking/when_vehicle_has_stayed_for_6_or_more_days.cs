@@ -1,5 +1,4 @@
 using FluentAssertions;
-using Moq;
 using ParkingLotKata2;
 using Xunit;
 
@@ -12,7 +11,7 @@ namespace XUnitTestProject1
         {
             //Arrange
             var sut = new LongTermDiscounter() as ILongTermDiscounter;
-            
+
             //Act
             var discountedAmount = sut.Discount(8, 10.0);
 
@@ -20,7 +19,7 @@ namespace XUnitTestProject1
             discountedAmount.Should().Be(7);
         }
     }
-    
+
     public class when_vehicle_has_stayed_for_less_than_3_days
     {
         [Fact]
@@ -28,7 +27,7 @@ namespace XUnitTestProject1
         {
             //Arrange
             var sut = new LongTermDiscounter() as ILongTermDiscounter;
-            
+
             //Act
             var discountedAmount = sut.Discount(2, 10.0);
 

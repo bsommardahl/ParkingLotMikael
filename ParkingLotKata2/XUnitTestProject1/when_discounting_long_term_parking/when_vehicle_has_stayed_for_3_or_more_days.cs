@@ -1,5 +1,4 @@
 using FluentAssertions;
-using Moq;
 using ParkingLotKata2;
 using Xunit;
 
@@ -12,7 +11,7 @@ namespace XUnitTestProject1
         {
             //Arrange
             var sut = new LongTermDiscounter() as ILongTermDiscounter;
-            
+
             //Act
             var discountedAmount = sut.Discount(4, 10.0);
 

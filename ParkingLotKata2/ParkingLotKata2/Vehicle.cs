@@ -1,6 +1,6 @@
 namespace ParkingLotKata2
 {
-    public class Vehicle : IVehicle
+    public abstract class Vehicle : IVehicle
     {
         public Vehicle(IDriver driver)
         {
@@ -8,7 +8,7 @@ namespace ParkingLotKata2
         }
 
         public IDriver Driver { get; }
-        public double Length { get; }
+        public abstract double Length { get; }
 
     }
 }

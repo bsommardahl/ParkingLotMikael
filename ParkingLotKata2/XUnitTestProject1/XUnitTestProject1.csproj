@@ -19,8 +19,4 @@
     <ProjectReference Include="..\ParkingLotKata2\ParkingLotKata2.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="when_unparking" />
-  </ItemGroup>
-
 </Project>

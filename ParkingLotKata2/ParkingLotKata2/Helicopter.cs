@@ -6,5 +6,7 @@ namespace ParkingLotKata2
         {
 
         }
+        
+        public override double Length => 8;
     }
 }

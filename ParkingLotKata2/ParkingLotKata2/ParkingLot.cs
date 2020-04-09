@@ -34,7 +34,7 @@ namespace ParkingLotKata2
         }
 
 
-        public void UnparkVehicle(IVehicle vehicle, int days)
+        public void UnparkVehicle<T>(T vehicle, int days) where T:IVehicle
         {
             Spaces += _calculateSpaces.GetSpaces(vehicle);
 
@@ -44,7 +44,7 @@ namespace ParkingLotKata2
 
         }
 
-        private double GetTheAmount(IVehicle vehicle, int days)
+        private double GetTheAmount<T>(T vehicle, int days) where T: IVehicle
         {
             var strategy = _vehicleCostWithdrawalStrategyFactory.Create(vehicle);
             var amount = strategy.Execute(vehicle, days);

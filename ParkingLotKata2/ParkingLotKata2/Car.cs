@@ -7,5 +7,7 @@ namespace ParkingLotKata2
         {
             HasTrumpSticker = hasTrumpSticker;
         }
+        
+        public override double Length => 2;
     }
 }

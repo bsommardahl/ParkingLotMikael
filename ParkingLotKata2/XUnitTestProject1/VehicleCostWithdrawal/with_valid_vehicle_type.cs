@@ -13,15 +13,17 @@ namespace XUnitTestProject1.VehicleCostWithdrawal
             //Arrange
             var strategies = new List<IVehicleCostCalculationStrategy>()
             {
-                new CarCostWithdrawalStrategy()
+                new BusCostCalculationStrategy(),
+                new CarCostCalculationStrategy(),
+                new HelicopterCostCalculationStrategy()
             };
             var factory = new VehicleCostWithdrawalStrategyFactory(strategies);
 
             //Act
-            var strategy = factory.Create(new Car(new Driver())) as IVehicleCostWithdrawalStrategy<Car>;
+            var strategy = factory.Create(new Car(new Driver())) as IVehicleCostCalculationStrategy<Car>;
 
             //Assert
-            strategy.Should().BeOfType<CarCostWithdrawalStrategy>();
+            strategy.Should().BeOfType<CarCostCalculationStrategy>();
         }
     }
 }

@@ -11,7 +11,7 @@ namespace XUnitTestProject1
         public void should_withdraw_the_amount_for_a_motorcycle()
         {
             //Arrange
-            var sut = new MotorCycleCostWithdrawalStrategy() as IVehicleCostWithdrawalStrategy<MotorCycle>;
+            var sut = new MotorCycleCostCalculationStrategy() as IVehicleCostCalculationStrategy<MotorCycle>;
             var driver = A.Fake<IDriver>();
 
             //Act

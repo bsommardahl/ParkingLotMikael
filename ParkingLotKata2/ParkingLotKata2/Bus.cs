@@ -5,5 +5,7 @@ namespace ParkingLotKata2
         public Bus(IDriver driver) : base(driver)
         {
         }
+
+        public override double Length => 4;
     }
 }

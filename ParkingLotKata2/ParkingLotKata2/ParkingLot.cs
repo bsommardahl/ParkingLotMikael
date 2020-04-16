@@ -1,50 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace ParkingLotKata2
 {
     public class ParkingLot
     {
-        readonly int _metersPerSpace;
         readonly ILongTermDiscounter _longTermDiscounter;
         readonly IVehicleCostWithdrawalStrategyFactory _vehicleCostWithdrawalStrategyFactory;
-        private readonly ICalculateSpaces _calculateSpaces;
+        readonly ICalculateSpaces _calculateSpaces;
+        readonly List<IVehicle> _vehicles;
+        readonly int _originalSpaces;
 
 
-        public ParkingLot(int spaces, int metersPerSpace, ILongTermDiscounter longTermDiscounter,
+        public ParkingLot(int spaces, ILongTermDiscounter longTermDiscounter,
             IVehicleCostWithdrawalStrategyFactory vehicleCostWithdrawalStrategyFactory,
             ICalculateSpaces calculateSpaces)
         {
-            _metersPerSpace = metersPerSpace;
             _longTermDiscounter = longTermDiscounter;
             _vehicleCostWithdrawalStrategyFactory = vehicleCostWithdrawalStrategyFactory;
-            Spaces = spaces;
+            _originalSpaces = spaces;
             _calculateSpaces = calculateSpaces;
+            _vehicles = new List<IVehicle>();
         }
 
-        public double Spaces { get; private set; }
+        public double Spaces => GetAvailableSpaces();
+
+        double GetAvailableSpaces()
+        {
+            return _originalSpaces - _vehicles.Select(x => _calculateSpaces.GetSpaces(x)).Sum();
+        }
 
         public void ParkVehicle(IVehicle vehicle)
         {
             var noMoreSpaces = Spaces == 0;
 
             var vehicleToSmall = vehicle.Length < 1;
-            var VehicleBiggerThanSpacesLeft = _calculateSpaces.GetSpaces(vehicle) > Spaces;
-            if (noMoreSpaces || vehicleToSmall || VehicleBiggerThanSpacesLeft)
+            var vehicleBiggerThanSpacesLeft = _calculateSpaces.GetSpaces(vehicle) > Spaces;
+            if (noMoreSpaces || vehicleToSmall || vehicleBiggerThanSpacesLeft)
                 throw new NoMoreSpaceException();
 
-            Spaces -= _calculateSpaces.GetSpaces(vehicle);
+            _vehicles.Add(vehicle);
         }
 
 
-        public void UnparkVehicle<T>(T vehicle, int days) where T:IVehicle
+        public void UnparkVehicle<T>(T vehicle, int days) where T : IVehicle
         {
-            Spaces += _calculateSpaces.GetSpaces(vehicle);
+            if (!_vehicles.Contains(vehicle))
+                throw new UnknownVehicleException();
 
             var amount = GetTheAmount(vehicle, days);
             var discountedAmount = _longTermDiscounter.Discount(days, amount);
             vehicle.Driver.Withdraw(discountedAmount);
 
+            _vehicles.Remove(vehicle);
         }
 
-        private double GetTheAmount<T>(T vehicle, int days) where T: IVehicle
+        double GetTheAmount<T>(T vehicle, int days) where T : IVehicle
         {
             var strategy = _vehicleCostWithdrawalStrategyFactory.Create(vehicle);
             var amount = strategy.Execute(vehicle, days);

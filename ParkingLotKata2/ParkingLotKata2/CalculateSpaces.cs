@@ -2,7 +2,7 @@ namespace ParkingLotKata2
 {
     public class CalculateSpaces : ICalculateSpaces
     {
-        private readonly int _metersPerSpace;
+        readonly int _metersPerSpace;
 
 
         public CalculateSpaces(int metersPerSpace)

@@ -33,7 +33,7 @@
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/LongTermDiscounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_is_full.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_withdrawing_the_cost/when_withdrawing_the_cost_for_a_car.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_unparking/when_unparking_a_vehicle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_unparking/when_unparking_a_known_vehicle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_parking/when_Parking_A_Vehicle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestProject1/when_parking_a_vehicle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_3_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
@@ -74,14 +74,15 @@
         <option value="$PROJECT_DIR$/ParkingLotKata2/Car.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/Helicopter.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/MotorCycle.cs" />
-        <option value="$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_is_full.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/when_unparking/when_unparking_a_vehicle.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/when_parking/when_calculating_spaces.cs" />
         <option value="$PROJECT_DIR$/TestProject1/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/VehicleCostWithdrawal/with_valid_vehicle_type.cs" />
-        <option value="$PROJECT_DIR$/TestProject1/when_parking_a_vehicle.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicleCostCalculationStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs" />
+        <option value="$PROJECT_DIR$/TestProject1/when_parking_a_vehicle.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_is_full.cs" />
+        <option value="$PROJECT_DIR$/XUnitTestProject1/when_unparking/when_unparking_a_known_vehicle.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" />
       </list>
     </option>
@@ -134,7 +135,8 @@
       <option name="presentableId" value="Default" />
       <updated>1585413230018</updated>
       <workItem from="1585413235285" duration="3547000" />
-      <workItem from="1585923848300" duration="5903000" />
+      <workItem from="1585923848300" duration="7496000" />
+      <workItem from="1587042886888" duration="858000" />
     </task>
     <servers />
   </component>
@@ -238,6 +240,10 @@
       <screen x="0" y="0" width="1347" height="849" />
     </state>
     <state x="323" y="0" width="744" height="849" key="find.popup/0.0.1347.849@0.0.1347.849" timestamp="1586440239141" />
+    <state x="393" y="199" key="run.anything.popup" timestamp="1587043768609">
+      <screen x="0" y="0" width="1461" height="883" />
+    </state>
+    <state x="393" y="199" key="run.anything.popup/0.0.1461.883@0.0.1461.883" timestamp="1587043768609" />
     <state x="352" y="143" width="672" height="706" key="search.everywhere.popup" timestamp="1586441344228">
       <screen x="0" y="0" width="1347" height="849" />
     </state>
@@ -249,39 +255,39 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs</url>
-          <line>29</line>
+          <line>41</line>
           <properties documentPath="$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" initialLine="29">
             <startOffsets>
-              <option value="1148" />
+              <option value="1492" />
             </startOffsets>
             <endOffsets>
-              <option value="1214" />
+              <option value="1558" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs</url>
-          <line>25</line>
+          <line>37</line>
           <properties documentPath="$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" initialLine="25">
             <startOffsets>
-              <option value="958" />
+              <option value="1302" />
             </startOffsets>
             <endOffsets>
-              <option value="989" />
+              <option value="1333" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs</url>
-          <line>26</line>
+          <line>24</line>
           <properties documentPath="$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs" initialLine="24">
             <startOffsets>
-              <option value="862" />
+              <option value="824" />
             </startOffsets>
             <endOffsets>
-              <option value="887" />
+              <option value="877" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />

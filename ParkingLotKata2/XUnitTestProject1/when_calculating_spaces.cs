@@ -7,7 +7,7 @@ namespace XUnitTestProject1
 {
     public class when_calculating_spaces
     {
-        private CalculateSpaces _sut;
+        CalculateSpaces _sut;
 
 
         public when_calculating_spaces()

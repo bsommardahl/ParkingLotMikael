@@ -6,10 +6,7 @@ namespace ParkingLotKata2
         {
             const double basePrice = 5;
             var computedPrice = basePrice * days;
-            if (vehicle.HasTrumpSticker)
-            {
-                computedPrice = basePrice * 2;
-            }
+            if (vehicle.HasTrumpSticker) computedPrice = basePrice * 2;
 
             return computedPrice;
         }

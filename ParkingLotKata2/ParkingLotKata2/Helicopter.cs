@@ -4,9 +4,8 @@ namespace ParkingLotKata2
     {
         public Helicopter(IDriver driver) : base(driver)
         {
-
         }
-        
+
         public override double Length => 8;
     }
 }

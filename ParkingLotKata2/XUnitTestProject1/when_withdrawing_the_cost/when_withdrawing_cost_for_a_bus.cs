@@ -20,6 +20,5 @@ namespace XUnitTestProject1
             //Assert
             amount.Should().Be(9);
         }
-
     }
 }

@@ -28,9 +28,11 @@ namespace TestProject1
             _startingBalance = 10;
             driver = new Driver();
             driver.AddToWallet(_startingBalance);
+            var vehicle = new Car(driver);
+            sut.ParkVehicle(vehicle);
 
             //Act
-            sut.UnparkVehicle(new Car(driver), 1);
+            sut.UnparkVehicle(vehicle, 1);
         }
 
         [Fact]

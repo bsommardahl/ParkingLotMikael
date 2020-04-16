@@ -22,15 +22,10 @@ namespace ParkingLotKata2
                 var strategyGenericType = strategy.GetType().GetInterfaces().SelectMany(x => x.GenericTypeArguments)
                     .First();
 
-                if (strategyGenericType == vehicle.GetType())
-                {
-                    return (IVehicleCostCalculationStrategy<T>)strategy;
-                }
+                if (strategyGenericType == vehicle.GetType()) return (IVehicleCostCalculationStrategy<T>) strategy;
             }
 
             throw new NoMatchingVehicleCostWithdrawalStrategyException(vehicle);
         }
-
-        
     }
 }

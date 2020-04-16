@@ -39,6 +39,7 @@
         <e p="ParkingLot.cs" t="Include" />
         <e p="ParkingLotKata2.csproj" t="IncludeRecursive" />
         <e p="Program.cs" t="Include" />
+        <e p="UnknownVehicleException.cs" t="Include" />
         <e p="Vehicle.cs" t="Include" />
         <e p="VehicleCostWithdrawalStrategyFactory.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -88,7 +89,7 @@
           <e p="when_parking_lot_is_full.cs" t="Include" />
         </e>
         <e p="when_unparking" t="Include">
-          <e p="when_unparking_a_vehicle.cs" t="Include" />
+          <e p="when_unparking_a_known_vehicle.cs" t="Include" />
         </e>
         <e p="when_withdrawing_the_cost" t="Include">
           <e p="when_withdrawing_cost_for_a_bus.cs" t="Include" />

@@ -18,6 +18,5 @@ namespace XUnitTestProject1
             //Assert
             discountedAmount.Should().Be(8);
         }
-
     }
 }

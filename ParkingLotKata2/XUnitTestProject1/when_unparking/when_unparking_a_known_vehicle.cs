@@ -6,17 +6,32 @@ using Xunit;
 
 namespace XUnitTestProject1.when_unparking
 {
-    public class when_unparking_a_vehicle : given_a_parking_lot
+    public class when_unparking_an_unknown_vehicle : given_a_parking_lot
+    {
+        [Fact]
+        public void should_throw_an_exception()
+        {
+            
+            //Act
+            Action unparkAction = () => Sut.UnparkVehicle(A.Fake<IVehicle>(), 1);
+
+            //Assert
+            unparkAction.Should().Throw<UnknownVehicleException>();
+        }
+
+    }
+
+    public class when_unparking_a_known_vehicle : given_a_parking_lot
     {
         readonly IVehicle _vehicle;
         readonly int _days;
         IDriver _driver;
 
         IVehicleCostCalculationStrategy<IVehicle> _vehicleCostCalculationStrategy;
-        private int _chargeAmount;
-        private int _discountedAmount;
+        int _chargeAmount;
+        int _discountedAmount;
 
-        public when_unparking_a_vehicle()
+        public when_unparking_a_known_vehicle()
         {
             //Arrange
             var vehicleLength = 2;
@@ -27,7 +42,8 @@ namespace XUnitTestProject1.when_unparking
             A.CallTo(() => _vehicle.Length).Returns(vehicleLength);
 
             _vehicleCostCalculationStrategy = A.Fake<IVehicleCostCalculationStrategy<IVehicle>>();
-            A.CallTo(() => _vehicleCostWithdrawalStrategyFactory.Create(_vehicle)).Returns(_vehicleCostCalculationStrategy);
+            A.CallTo(() => _vehicleCostWithdrawalStrategyFactory.Create(_vehicle))
+                .Returns(_vehicleCostCalculationStrategy);
 
             _chargeAmount = 10;
             A.CallTo(() => _vehicleCostCalculationStrategy.Execute(_vehicle, _days)).Returns(_chargeAmount);
@@ -37,6 +53,8 @@ namespace XUnitTestProject1.when_unparking
 
             A.CallTo(() => _calculateSpaces.GetSpaces(_vehicle)).Returns(1);
 
+            Sut.ParkVehicle(_vehicle);
+            
             //Act
             Sut.UnparkVehicle(_vehicle, _days);
         }
@@ -45,7 +63,7 @@ namespace XUnitTestProject1.when_unparking
         public void should_add_spaces_back()
         {
             //Assert
-            Sut.Spaces.Should().Be(_spacesBeforeUnpark + 1);
+            Sut.Spaces.Should().Be(_originalAmountOfSpaces);
         }
 
         [Fact]
@@ -54,7 +72,6 @@ namespace XUnitTestProject1.when_unparking
             //Assert
             A.CallTo(() => _driver.Withdraw(_discountedAmount)).MustHaveHappened();
         }
-
 
 
         public class when_parking_lot_is_full : given_a_parking_lot

@@ -4,9 +4,8 @@ namespace ParkingLotKata2
     {
         public MotorCycle(IDriver driver) : base(driver)
         {
-
         }
-        
+
         public override double Length => 1;
     }
 }

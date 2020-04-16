@@ -18,17 +18,13 @@ namespace XUnitTestProject1
             A.CallTo(() => _calculateSpaces.GetSpaces(vehicle)).Returns(1);
             //Act
             Sut.ParkVehicle(vehicle);
-            
         }
+
         [Fact]
         public void should_allow_the_vehicle_to_be_parked()
         {
             //Assert
             Sut.Spaces.Should().Be(99);
-
         }
-        
-        
-
     }
 }

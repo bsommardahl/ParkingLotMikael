@@ -12,6 +12,5 @@ namespace ParkingLotKata2
 
             return computedPrice;
         }
-
     }
 }

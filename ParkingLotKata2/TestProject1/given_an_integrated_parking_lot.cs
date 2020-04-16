@@ -11,14 +11,13 @@ namespace TestProject1
         protected given_an_integrated_parking_lot()
         {
             //Arrange
-            sut = new ParkingLot(100, 2, new LongTermDiscounter(), new VehicleCostWithdrawalStrategyFactory(
+            sut = new ParkingLot(100, new LongTermDiscounter(), new VehicleCostWithdrawalStrategyFactory(
                 new List<IVehicleCostCalculationStrategy>
                 {
                     new BusCostCalculationStrategy(), new CarCostCalculationStrategy(),
                     new HelicopterCostCalculationStrategy(), new ElectricCarCostCalculationStrategy(),
                     new MotorCycleCostCalculationStrategy()
                 }), new CalculateSpaces(2));
-
         }
     }
 }

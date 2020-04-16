@@ -17,7 +17,7 @@ namespace TestProject1
                     new BusCostCalculationStrategy(), new CarCostCalculationStrategy(),
                     new HelicopterCostCalculationStrategy(), new ElectricCarCostCalculationStrategy(),
                     new MotorCycleCostCalculationStrategy()
-                }), new CalculateSpaces(2));
+                }), new CalculateSpaces(2), new DummyLicenseVerifier());
         }
     }
 }

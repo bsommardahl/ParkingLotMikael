@@ -4,5 +4,6 @@ namespace ParkingLotKata2
     {
         IDriver Driver { get; }
         double Length { get; }
+        string License { get; }
     }
 }

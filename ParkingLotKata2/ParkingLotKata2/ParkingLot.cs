@@ -9,18 +9,20 @@ namespace ParkingLotKata2
         readonly ILongTermDiscounter _longTermDiscounter;
         readonly IVehicleCostWithdrawalStrategyFactory _vehicleCostWithdrawalStrategyFactory;
         readonly ICalculateSpaces _calculateSpaces;
+        readonly ILicenseVerifier _licenseVerifier;
         readonly List<IVehicle> _vehicles;
         readonly int _originalSpaces;
 
 
         public ParkingLot(int spaces, ILongTermDiscounter longTermDiscounter,
             IVehicleCostWithdrawalStrategyFactory vehicleCostWithdrawalStrategyFactory,
-            ICalculateSpaces calculateSpaces)
+            ICalculateSpaces calculateSpaces, ILicenseVerifier licenseVerifier)
         {
             _longTermDiscounter = longTermDiscounter;
             _vehicleCostWithdrawalStrategyFactory = vehicleCostWithdrawalStrategyFactory;
             _originalSpaces = spaces;
             _calculateSpaces = calculateSpaces;
+            _licenseVerifier = licenseVerifier;
             _vehicles = new List<IVehicle>();
         }
 
@@ -33,11 +35,13 @@ namespace ParkingLotKata2
 
         public void ParkVehicle(IVehicle vehicle)
         {
+            if (vehicle.Length < 1) throw new VehicleHasNoLengthException();
+            if (_licenseVerifier.IsInvalid(vehicle.License)) throw new InvalidLicenseException();
+            
             var noMoreSpaces = Spaces == 0;
 
-            var vehicleToSmall = vehicle.Length < 1;
             var vehicleBiggerThanSpacesLeft = _calculateSpaces.GetSpaces(vehicle) > Spaces;
-            if (noMoreSpaces || vehicleToSmall || vehicleBiggerThanSpacesLeft)
+            if (noMoreSpaces || vehicleBiggerThanSpacesLeft)
                 throw new NoMoreSpaceException();
 
             _vehicles.Add(vehicle);

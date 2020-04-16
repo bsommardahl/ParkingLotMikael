@@ -27,10 +27,12 @@
         <e p="HelicopterCostCalculationStrategy.cs" t="Include" />
         <e p="ICalculateSpaces.cs" t="Include" />
         <e p="IDriver.cs" t="Include" />
+        <e p="ILicenseVerifier.cs" t="Include" />
         <e p="ILongTermDiscounter.cs" t="Include" />
         <e p="IVehicle.cs" t="Include" />
         <e p="IVehicleCostCalculationStrategy.cs" t="Include" />
         <e p="IVehicleCostWithdrawalStrategyFactory.cs" t="Include" />
+        <e p="InvalidLicenseException.cs" t="Include" />
         <e p="LongTermDiscounter.cs" t="Include" />
         <e p="MotorCycle.cs" t="Include" />
         <e p="MotorCycleCostCalculationStrategy.cs" t="Include" />
@@ -42,6 +44,7 @@
         <e p="UnknownVehicleException.cs" t="Include" />
         <e p="Vehicle.cs" t="Include" />
         <e p="VehicleCostWithdrawalStrategyFactory.cs" t="Include" />
+        <e p="VehicleHasNoLengthException.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -53,6 +56,7 @@
       </e>
       <e p="ParkingLotKata2.sln" t="IncludeFlat" />
       <e p="TestProject1" t="IncludeRecursive">
+        <e p="DummyLicenseVerifier.cs" t="Include" />
         <e p="TestProject1.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="given_an_integrated_parking_lot.cs" t="Include" />
@@ -85,7 +89,7 @@
           <e p="when_vehicle_has_stayed_for_6_or_more_days.cs" t="Include" />
         </e>
         <e p="when_parking" t="Include">
-          <e p="when_Parking_A_Vehicle.cs" t="Include" />
+          <e p="when_parking_a_vehicle_with_valid_license.cs" t="Include" />
           <e p="when_parking_lot_is_full.cs" t="Include" />
         </e>
         <e p="when_unparking" t="Include">

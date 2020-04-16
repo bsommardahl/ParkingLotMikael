@@ -81,6 +81,8 @@ namespace XUnitTestProject1.when_unparking
             {
                 //Arrange
                 var vehicle = A.Fake<IVehicle>();
+                A.CallTo(() => vehicle.Length).Returns(1);
+                A.CallTo(() => _calculateSpaces.GetSpaces(vehicle)).Returns(1000);
 
                 //Act
                 Action act = () => Sut.ParkVehicle(vehicle);

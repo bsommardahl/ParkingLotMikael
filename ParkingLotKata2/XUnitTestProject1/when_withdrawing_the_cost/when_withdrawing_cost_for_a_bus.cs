@@ -15,7 +15,7 @@ namespace XUnitTestProject1
             var driver = A.Fake<IDriver>();
 
             //Act
-            var amount = sut.Execute(new Bus(driver), 1);
+            var amount = sut.Execute(new Bus(driver, "license"), 1);
 
             //Assert
             amount.Should().Be(9);

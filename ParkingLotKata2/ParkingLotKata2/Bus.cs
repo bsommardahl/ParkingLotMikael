@@ -2,7 +2,7 @@ namespace ParkingLotKata2
 {
     public class Bus : Vehicle
     {
-        public Bus(IDriver driver) : base(driver)
+        public Bus(IDriver driver, string license) : base(driver, license)
         {
         }
 

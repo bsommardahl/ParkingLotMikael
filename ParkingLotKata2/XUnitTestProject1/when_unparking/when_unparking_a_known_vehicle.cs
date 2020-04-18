@@ -11,9 +11,9 @@ namespace XUnitTestProject1.when_unparking
         [Fact]
         public void should_throw_an_exception()
         {
-            
+
             //Act
-            Action unparkAction = () => Sut.UnparkVehicle(A.Fake<IVehicle>(), 1);
+            Action unparkAction = () => Sut.UnparkVehicle("invalided", 1);
 
             //Assert
             unparkAction.Should().Throw<UnknownVehicleException>();
@@ -40,6 +40,8 @@ namespace XUnitTestProject1.when_unparking
             _driver = A.Fake<IDriver>();
             A.CallTo(() => _vehicle.Driver).Returns(_driver);
             A.CallTo(() => _vehicle.Length).Returns(vehicleLength);
+            var license = "Valid";
+            A.CallTo(() => _vehicle.License).Returns(license);
 
             _vehicleCostCalculationStrategy = A.Fake<IVehicleCostCalculationStrategy<IVehicle>>();
             A.CallTo(() => _vehicleCostWithdrawalStrategyFactory.Create(_vehicle))
@@ -54,9 +56,9 @@ namespace XUnitTestProject1.when_unparking
             A.CallTo(() => _calculateSpaces.GetSpaces(_vehicle)).Returns(1);
 
             Sut.ParkVehicle(_vehicle);
-            
+
             //Act
-            Sut.UnparkVehicle(_vehicle, _days);
+            Sut.UnparkVehicle(license, _days);
         }
 
         [Fact]

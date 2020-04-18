@@ -4,7 +4,7 @@ namespace ParkingLotKata2
     {
         public bool HasTrumpSticker { get; private set; }
 
-        public Car(IDriver driver, bool hasTrumpSticker = false) : base(driver)
+        public Car(IDriver driver, string license, bool hasTrumpSticker = false) : base(driver, license)
         {
             HasTrumpSticker = hasTrumpSticker;
         }

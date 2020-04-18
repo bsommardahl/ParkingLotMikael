@@ -14,7 +14,7 @@ namespace ParkingLotKata2
         }
 
 
-        public IVehicleCostCalculationStrategy<T> Create<T>(T vehicle) where T : IVehicle
+        public IVehicleCostCalculationStrategy Create(IVehicle vehicle)
 
         {
             foreach (var strategy in _vehicleStrategies)
@@ -22,7 +22,7 @@ namespace ParkingLotKata2
                 var strategyGenericType = strategy.GetType().GetInterfaces().SelectMany(x => x.GenericTypeArguments)
                     .First();
 
-                if (strategyGenericType == vehicle.GetType()) return (IVehicleCostCalculationStrategy<T>) strategy;
+                if (strategyGenericType == vehicle.GetType()) return (IVehicleCostCalculationStrategy)strategy;
             }
 
             throw new NoMatchingVehicleCostWithdrawalStrategyException(vehicle);

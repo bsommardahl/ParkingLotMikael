@@ -13,7 +13,7 @@ namespace XUnitTestProject1
             //Arrange
             var sut = new CarCostCalculationStrategy() as IVehicleCostCalculationStrategy<Car>;
             var driver = A.Fake<IDriver>();
-            var vehicle = new Car(driver, true);
+            var vehicle = new Car(driver, "license", true);
 
             //Act
             var amount = sut.Execute(vehicle, 1);

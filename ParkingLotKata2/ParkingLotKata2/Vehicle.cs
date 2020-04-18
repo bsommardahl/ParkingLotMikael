@@ -2,7 +2,7 @@ namespace ParkingLotKata2
 {
     public abstract class Vehicle : IVehicle
     {
-        public Vehicle(IDriver driver)
+        public Vehicle(IDriver driver, string license)
         {
             Driver = driver;
         }

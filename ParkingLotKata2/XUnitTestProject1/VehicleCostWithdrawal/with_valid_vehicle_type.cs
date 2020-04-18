@@ -20,7 +20,7 @@ namespace XUnitTestProject1.VehicleCostWithdrawal
             var factory = new VehicleCostWithdrawalStrategyFactory(strategies);
 
             //Act
-            var strategy = factory.Create(new Car(new Driver())) as IVehicleCostCalculationStrategy<Car>;
+            var strategy = factory.Create(new Car(new Driver(), "license")) as IVehicleCostCalculationStrategy<Car>;
 
             //Assert
             strategy.Should().BeOfType<CarCostCalculationStrategy>();

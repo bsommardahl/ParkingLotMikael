@@ -37,7 +37,7 @@ namespace ParkingLotKata2
         {
             if (vehicle.Length < 1) throw new VehicleHasNoLengthException();
             if (_licenseVerifier.IsInvalid(vehicle.License)) throw new InvalidLicenseException();
-            
+
             var noMoreSpaces = Spaces == 0;
 
             var vehicleBiggerThanSpacesLeft = _calculateSpaces.GetSpaces(vehicle) > Spaces;
@@ -48,11 +48,12 @@ namespace ParkingLotKata2
         }
 
 
-        public void UnparkVehicle<T>(T vehicle, int days) where T : IVehicle
+        public void UnparkVehicle(string license, int days)
         {
-            if (!_vehicles.Contains(vehicle))
+            var matches = _vehicles.Where(x => x.License == license).ToList();
+            if (!matches.Any())
                 throw new UnknownVehicleException();
-
+            var vehicle = matches.First();
             var amount = GetTheAmount(vehicle, days);
             var discountedAmount = _longTermDiscounter.Discount(days, amount);
             vehicle.Driver.Withdraw(discountedAmount);

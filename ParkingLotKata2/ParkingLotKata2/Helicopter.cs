@@ -2,7 +2,7 @@ namespace ParkingLotKata2
 {
     public class Helicopter : Vehicle
     {
-        public Helicopter(IDriver driver) : base(driver)
+        public Helicopter(IDriver driver, string license) : base(driver, license)
         {
         }
 

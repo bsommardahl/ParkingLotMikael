@@ -15,7 +15,7 @@ namespace XUnitTestProject1
             var driver = A.Fake<IDriver>();
 
             //Act
-            var amount = sut.Execute(new Helicopter(driver), 1);
+            var amount = sut.Execute(new Helicopter(driver, "license"), 1);
 
             //Assert
             amount.Should().Be(35);

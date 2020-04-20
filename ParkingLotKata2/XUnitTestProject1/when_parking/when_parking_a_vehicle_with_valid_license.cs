@@ -45,8 +45,6 @@ namespace XUnitTestProject1
 
     public class when_parking_a_vehicle_with_valid_license : given_a_parking_lot
     {
-        readonly IDriver _driver;
-
         public when_parking_a_vehicle_with_valid_license()
         {
             //Arrange

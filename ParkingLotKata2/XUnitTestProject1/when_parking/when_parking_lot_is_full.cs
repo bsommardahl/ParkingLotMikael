@@ -14,7 +14,6 @@ namespace XUnitTestProject1
 
         protected given_a_parking_lot()
         {
-            var metersPerSpace = 2;
             _originalAmountOfSpaces = 100;
             _longTermDiscounter = A.Fake<ILongTermDiscounter>();
             _vehicleCostWithdrawalStrategyFactory = A.Fake<IVehicleCostWithdrawalStrategyFactory>();

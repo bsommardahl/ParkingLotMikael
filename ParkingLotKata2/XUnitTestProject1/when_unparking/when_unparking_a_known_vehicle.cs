@@ -11,14 +11,12 @@ namespace XUnitTestProject1.when_unparking
         [Fact]
         public void should_throw_an_exception()
         {
-
             //Act
             Action unparkAction = () => Sut.UnparkVehicle("invalided", 1);
 
             //Assert
             unparkAction.Should().Throw<UnknownVehicleException>();
         }
-
     }
 
     public class when_unparking_a_known_vehicle : given_a_parking_lot
@@ -26,8 +24,6 @@ namespace XUnitTestProject1.when_unparking
         readonly IVehicle _vehicle;
         readonly int _days;
         IDriver _driver;
-
-        IVehicleCostCalculationStrategy<IVehicle> _vehicleCostCalculationStrategy;
         int _chargeAmount;
         int _discountedAmount;
 
@@ -43,12 +39,9 @@ namespace XUnitTestProject1.when_unparking
             var license = "Valid";
             A.CallTo(() => _vehicle.License).Returns(license);
 
-            _vehicleCostCalculationStrategy = A.Fake<IVehicleCostCalculationStrategy<IVehicle>>();
-            A.CallTo(() => _vehicleCostWithdrawalStrategyFactory.Create(_vehicle))
-                .Returns(_vehicleCostCalculationStrategy);
-
             _chargeAmount = 10;
-            A.CallTo(() => _vehicleCostCalculationStrategy.Execute(_vehicle, _days)).Returns(_chargeAmount);
+            A.CallTo(() => _vehicleCostWithdrawalStrategyFactory.Create(_vehicle))
+                .Returns((vehicle, days) => _chargeAmount);
 
             _discountedAmount = 1000;
             A.CallTo(() => _longTermDiscounter.Discount(_days, _chargeAmount)).Returns(_discountedAmount);

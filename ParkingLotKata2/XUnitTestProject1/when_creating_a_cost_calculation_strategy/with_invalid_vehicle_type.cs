@@ -19,11 +19,13 @@ namespace XUnitTestProject1.VehicleCostWithdrawal
             var factory = new VehicleCostWithdrawalStrategyFactory(strategies);
 
             //Act
-            Func<IVehicleCostCalculationStrategy<Car>> act = () =>
-                factory.Create(new Car(new Driver(), "license")) as IVehicleCostCalculationStrategy<Car>;
+            var action = new Action(() =>
+            {
+                factory.Create(new Car(new Driver(), "license"));
+            });
 
             //Assert
-            act.Should().Throw<NoMatchingVehicleCostWithdrawalStrategyException>();
+            action.Should().Throw<NoMatchingVehicleCostWithdrawalStrategyException>();
         }
     }
 }

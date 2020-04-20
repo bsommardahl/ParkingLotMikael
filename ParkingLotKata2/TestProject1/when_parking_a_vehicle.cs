@@ -4,7 +4,7 @@ using Xunit;
 
 namespace TestProject1
 {
-    public class when_parking_a_vehicle7 : given_an_integrated_parking_lot
+    public class when_parking_a_vehicle : given_an_integrated_parking_lot
     {
         [Fact]
         public void should_allow_it()

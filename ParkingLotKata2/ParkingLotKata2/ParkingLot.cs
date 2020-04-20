@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace ParkingLotKata2
 {
@@ -64,8 +65,10 @@ namespace ParkingLotKata2
         double GetTheAmount<T>(T vehicle, int days) where T : IVehicle
         {
             var strategy = _vehicleCostWithdrawalStrategyFactory.Create(vehicle);
-            var amount = strategy.Execute(vehicle, days);
+            var amount = strategy(vehicle, days);
             return amount;
         }
+
+        
     }
 }

@@ -22,13 +22,13 @@ namespace ConsoleApp1
                 var action = Console.ReadLine();
                 if (action.ToUpper().Contains("P"))
                 {
-                    Console.WriteLine("license number?");
+                    Console.WriteLine("parking, license number?");
                     var licenseNumber = Console.ReadLine();
                     sut.ParkVehicle(new Car(new Driver(), licenseNumber));
                 }
                 else
                 {
-                    Console.WriteLine("license number?");
+                    Console.WriteLine("unparking, license number?");
                     var licenseNumber = Console.ReadLine();
                     sut.UnparkVehicle(licenseNumber, 1);
                 }
@@ -41,7 +41,7 @@ namespace ConsoleApp1
     {
         public bool IsInvalid(string vehicleLicense)
         {
-            return true;
+            return false;
         }
     }
 }

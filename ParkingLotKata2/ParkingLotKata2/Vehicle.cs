@@ -5,6 +5,7 @@ namespace ParkingLotKata2
         public Vehicle(IDriver driver, string license)
         {
             Driver = driver;
+            License = license;
         }
 
         public IDriver Driver { get; }

@@ -13,5 +13,10 @@ namespace ParkingLotKata2
         {
             Wallet -= money;
         }
+
+        public double GetWalletSum()
+        {
+            return Wallet;
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace XUnitTestProject1.VehicleCostWithdrawal
     public class with_invalid_vehicle_type
     {
         [Fact]
-        public void should_return_the_matching_strategy()
+        public void should_throw_no_matching_vehicle_cost_withdrawal_strategy_exception()
         {
             //Arrange
             var strategies = new List<IVehicleCostCalculationStrategy>()

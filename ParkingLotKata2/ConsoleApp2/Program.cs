@@ -16,23 +16,42 @@ namespace ConsoleApp1
                     new MotorCycleCostCalculationStrategy()
                 }), new CalculateSpaces(2), new LicenseVerifier());
 
+            var driver = new Driver();
+
             while (true)
             {
-                Console.WriteLine("Park or unpark?");
-                var action = Console.ReadLine();
-                if (action.ToUpper().Contains("P"))
+                try
                 {
-                    Console.WriteLine("parking, license number?");
-                    var licenseNumber = Console.ReadLine();
-                    sut.ParkVehicle(new Car(new Driver(), licenseNumber));
-                }
-                else
-                {
-                    Console.WriteLine("unparking, license number?");
-                    var licenseNumber = Console.ReadLine();
-                    sut.UnparkVehicle(licenseNumber, 1);
-                }
+                    Console.WriteLine("Park or Unpark, AddMoney?");
+                    var action = Console.ReadLine();
 
+
+                    if (string.IsNullOrEmpty(action)) continue;
+                    if (action.ToUpper().Contains("P"))
+                    {
+                        Console.WriteLine("parking, license number?");
+                        var licenseNumber = Console.ReadLine();
+                        var car = new Car(driver, licenseNumber);
+                        sut.ParkVehicle(car);
+                    }
+                    else if (action.ToUpper().Contains("A"))
+                    {
+                        Console.WriteLine("adding money, amount?");
+                        var amount = Convert.ToInt32(Console.ReadLine());
+                        driver.AddToWallet(amount);
+                    }
+                    else
+                    {
+                        Console.WriteLine("unparking, license number?");
+                        var licenseNumber = Console.ReadLine();
+                        sut.UnparkVehicle(licenseNumber, 1);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    throw;
+                }
             }
         }
     }

@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -57,18 +56,22 @@ namespace ParkingLotKata2
             var vehicle = matches.First();
             var amount = GetTheAmount(vehicle, days);
             var discountedAmount = _longTermDiscounter.Discount(days, amount);
+            if (discountedAmount > vehicle.Driver.GetWalletSum())
+            {
+                throw new NotEnoughMoneyException("The driver do not have enough money");
+            }
             vehicle.Driver.Withdraw(discountedAmount);
 
             _vehicles.Remove(vehicle);
         }
 
-        double GetTheAmount<T>(T vehicle, int days) where T : IVehicle
+        private double GetTheAmount<T>(T vehicle, int days) where T : IVehicle
         {
             var strategy = _vehicleCostWithdrawalStrategyFactory.Create(vehicle);
             var amount = strategy(vehicle, days);
             return amount;
         }
 
-        
+
     }
 }

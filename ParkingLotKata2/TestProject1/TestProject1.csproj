@@ -17,4 +17,8 @@
       <ProjectReference Include="..\ParkingLotKata2\ParkingLotKata2.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="ContractTests" />
+    </ItemGroup>
+
 </Project>

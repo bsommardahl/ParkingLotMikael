@@ -45,6 +45,7 @@
         <e p="IVehicleCostCalculationStrategy.cs" t="Include" />
         <e p="IVehicleCostWithdrawalStrategyFactory.cs" t="Include" />
         <e p="InvalidLicenseException.cs" t="Include" />
+        <e p="LicenseVerifier.cs" t="Include" />
         <e p="LongTermDiscounter.cs" t="Include" />
         <e p="MotorCycle.cs" t="Include" />
         <e p="MotorCycleCostCalculationStrategy.cs" t="Include" />
@@ -68,7 +69,7 @@
       </e>
       <e p="ParkingLotKata2.sln" t="IncludeFlat" />
       <e p="TestProject1" t="IncludeRecursive">
-        <e p="DummyLicenseVerifier.cs" t="Include" />
+        <e p="ContractTests" t="Include" />
         <e p="TestProject1.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="given_an_integrated_parking_lot.cs" t="Include" />

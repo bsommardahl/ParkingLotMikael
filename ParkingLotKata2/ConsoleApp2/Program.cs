@@ -14,7 +14,7 @@ namespace ConsoleApp1
                     new BusCostCalculationStrategy(), new CarCostCalculationStrategy(),
                     new HelicopterCostCalculationStrategy(), new ElectricCarCostCalculationStrategy(),
                     new MotorCycleCostCalculationStrategy()
-                }), new CalculateSpaces(2), new DummyLicenseVerifier());
+                }), new CalculateSpaces(2), new LicenseVerifier());
 
             while (true)
             {
@@ -34,14 +34,6 @@ namespace ConsoleApp1
                 }
 
             }
-        }
-    }
-
-    internal class DummyLicenseVerifier : ILicenseVerifier
-    {
-        public bool IsInvalid(string vehicleLicense)
-        {
-            return false;
         }
     }
 }

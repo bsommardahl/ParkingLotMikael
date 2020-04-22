@@ -40,9 +40,9 @@
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_3_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_6_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/11/302bf22f/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/LicenseVerifier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/UnknownVehicleException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ILicenseVerifier.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/TestProject1/DummyLicenseVerifier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/InvalidLicenseException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/CarCostCalculationStrategy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -81,7 +81,6 @@
         <option value="$PROJECT_DIR$/TestProject1/UnitTest1.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicle.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/ILicenseVerifier.cs" />
-        <option value="$PROJECT_DIR$/TestProject1/given_an_integrated_parking_lot.cs" />
         <option value="$PROJECT_DIR$/TestProject1/DummyLicenseVerifier.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/IVehicleCostCalculationStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/CarCostCalculationStrategy.cs" />
@@ -98,6 +97,9 @@
         <option value="$PROJECT_DIR$/XUnitTestProject1/when_calculating_spaces.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/Vehicle.cs" />
         <option value="$PROJECT_DIR$/ConsoleApp2/Program.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/DummyLicenseVerifier.cs" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/LicenseVerifier.cs" />
+        <option value="$PROJECT_DIR$/TestProject1/given_an_integrated_parking_lot.cs" />
       </list>
     </option>
   </component>
@@ -173,7 +175,7 @@
       <updated>1585413230018</updated>
       <workItem from="1585413235285" duration="3547000" />
       <workItem from="1585923848300" duration="7496000" />
-      <workItem from="1587042886888" duration="6773000" />
+      <workItem from="1587042886888" duration="8179000" />
     </task>
     <servers />
   </component>
@@ -303,11 +305,11 @@
       <screen x="0" y="0" width="1461" height="883" />
     </state>
     <state x="393" y="199" key="run.anything.popup/0.0.1461.883@0.0.1461.883" timestamp="1587043768609" />
-    <state x="382" y="149" width="729" height="735" key="search.everywhere.popup" timestamp="1587401629589">
+    <state x="382" y="149" width="729" height="735" key="search.everywhere.popup" timestamp="1587574732987">
       <screen x="0" y="0" width="1461" height="883" />
     </state>
     <state x="352" y="143" width="672" height="706" key="search.everywhere.popup/0.0.1347.849@0.0.1347.849" timestamp="1586441344228" />
     <state x="370" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1414.816@0.0.1414.816" timestamp="1585666182344" />
-    <state x="382" y="149" width="729" height="735" key="search.everywhere.popup/0.0.1461.883@0.0.1461.883" timestamp="1587401629589" />
+    <state x="382" y="149" width="729" height="735" key="search.everywhere.popup/0.0.1461.883@0.0.1461.883" timestamp="1587574732987" />
   </component>
 </project>

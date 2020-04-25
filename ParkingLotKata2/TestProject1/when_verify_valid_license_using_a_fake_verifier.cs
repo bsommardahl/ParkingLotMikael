@@ -18,10 +18,10 @@ namespace TestProject1
             };
 
             //Act
-            var result = verifiers.Select(x => x.IsInvalid("122"));
+            var result = verifiers.Select(x => x.IsInvalid("222"));
 
             //Assert
-            result.ValueShouldBe(true);
+            result.ValueShouldBe(false);
         }
 
     }

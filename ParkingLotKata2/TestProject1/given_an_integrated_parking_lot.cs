@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using FluentAssertions;
 using ParkingLotKata2;
-using Xunit;
 
 namespace TestProject1
 {
@@ -28,28 +25,13 @@ namespace TestProject1
     {
         public bool IsInvalid(string vehicleLicense)
         {
-            return false;
-        }
-    }
-
-    public class when_validating_the_fake_license_verifier_against_the_real
-    {
-        [Fact]
-        public void should_behave_the_same()
-        {
-            //Arrange
-            var suts = new List<ILicenseVerifier>
+            var firstChar = vehicleLicense[0];
+            var isInt = int.TryParse(firstChar.ToString(), out var firstNum);
+            if (!isInt)
             {
-                new FakeLicenseVerifier(),
-                new LicenseVerifier()
-            };
-            
-            //Act
-            var results = suts.Select(x => x.IsInvalid("123"));
-
-            //Assert
-            results.Should().AllBeEquivalentTo(true);
+                return false;
+            }
+            return firstNum % 2 > 0;
         }
-
     }
 }

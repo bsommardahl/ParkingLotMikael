@@ -10,7 +10,7 @@ namespace ParkingLotKata2
             {
                 return false;
             }
-            return firstNum % 2 <= 0;
+            return firstNum % 2 > 0;
         }
     }
 }

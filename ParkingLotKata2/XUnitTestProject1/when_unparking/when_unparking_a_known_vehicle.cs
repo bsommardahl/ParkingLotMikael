@@ -36,6 +36,7 @@ namespace XUnitTestProject1.when_unparking
                 .Returns((vehicle, days) => _chargeAmount);
 
             A.CallTo(() => _longTermDiscounter.Discount(_days, _chargeAmount)).Returns(_discountedAmount);
+            A.CallTo(() => _vehicleRepository.Get(_license)).Returns(_vehicle);
         }
 
 
@@ -47,7 +48,7 @@ namespace XUnitTestProject1.when_unparking
             A.CallTo(() => _driver.GetWalletSum()).Returns(0);
 
             //Act
-            Sut.ParkVehicle(_vehicle);
+
             Action unparkAction = () => Sut.UnparkVehicle(_license, 1);
 
             //Assert
@@ -88,10 +89,10 @@ namespace XUnitTestProject1.when_unparking
 
             A.CallTo(() => _longTermDiscounter.Discount(_days, _chargeAmount)).Returns(_discountedAmount);
             A.CallTo(() => _calculateSpaces.GetSpaces(_vehicle)).Returns(1);
-
-            Sut.ParkVehicle(_vehicle);
+            A.CallTo(() => _vehicleRepository.Get(_license)).Returns(_vehicle);
 
             //Act
+            Sut.ParkVehicle(_vehicle);
             Sut.UnparkVehicle(_license, _days);
         }
 

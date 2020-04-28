@@ -6,10 +6,12 @@ namespace ParkingLotKata2
         {
             Driver = driver;
             License = license;
+
         }
 
         public IDriver Driver { get; }
         public abstract double Length { get; }
         public string License { get; private set; }
+
     }
 }

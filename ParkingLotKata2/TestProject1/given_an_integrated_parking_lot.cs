@@ -17,21 +17,7 @@ namespace TestProject1
                     new BusCostCalculationStrategy(), new CarCostCalculationStrategy(),
                     new HelicopterCostCalculationStrategy(), new ElectricCarCostCalculationStrategy(),
                     new MotorCycleCostCalculationStrategy()
-                }), new CalculateSpaces(2), new FakeLicenseVerifier());
-        }
-    }
-
-    public class FakeLicenseVerifier : ILicenseVerifier
-    {
-        public bool IsInvalid(string vehicleLicense)
-        {
-            var firstChar = vehicleLicense[0];
-            var isInt = int.TryParse(firstChar.ToString(), out var firstNum);
-            if (!isInt)
-            {
-                return false;
-            }
-            return firstNum % 2 > 0;
+                }), new CalculateSpaces(2), new FakeLicenseVerifier(), new FakeRepository<IVehicle>());
         }
     }
 }

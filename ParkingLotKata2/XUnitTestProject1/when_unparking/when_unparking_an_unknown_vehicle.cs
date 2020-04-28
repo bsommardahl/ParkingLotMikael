@@ -1,4 +1,5 @@
 using System;
+using FakeItEasy;
 using FluentAssertions;
 using ParkingLotKata2;
 using Xunit;
@@ -11,7 +12,9 @@ namespace XUnitTestProject1.when_unparking
         public void should_throw_an_exception()
         {
             //Act
-            Action unparkAction = () => Sut.UnparkVehicle("invalided", 1);
+            const string license = "Invalid";
+            A.CallTo(() => _vehicleRepository.Get(license)).Returns(null);
+            Action unparkAction = () => Sut.UnparkVehicle(license, 1);
 
             //Assert
             unparkAction.Should().Throw<UnknownVehicleException>();

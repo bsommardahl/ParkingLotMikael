@@ -1,16 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DotNetEnv" Version="1.4.0" />
+    <PackageReference Include="MongoDB.Driver" Version="2.9.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ParkingLot.Data\ParkingLot.Data.csproj" />
     <ProjectReference Include="..\ParkingLotKata2\ParkingLotKata2.csproj" />
   </ItemGroup>
 

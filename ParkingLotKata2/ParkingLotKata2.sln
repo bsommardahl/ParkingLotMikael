@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTestProject1", "XUnitT
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "TestProject1\TestProject1.csproj", "{739823D9-EF01-4130-8DB6-F3210BBB1A9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{C5097049-AF83-461B-BAEF-A63003AD5B15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{C5097049-AF83-461B-BAEF-A63003AD5B15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParkingLot.Data", "ParkingLot.Data\ParkingLot.Data.csproj", "{F4D8D13A-D814-4B69-99DE-D179DAC390FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{C5097049-AF83-461B-BAEF-A63003AD5B15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5097049-AF83-461B-BAEF-A63003AD5B15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5097049-AF83-461B-BAEF-A63003AD5B15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4D8D13A-D814-4B69-99DE-D179DAC390FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4D8D13A-D814-4B69-99DE-D179DAC390FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4D8D13A-D814-4B69-99DE-D179DAC390FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4D8D13A-D814-4B69-99DE-D179DAC390FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

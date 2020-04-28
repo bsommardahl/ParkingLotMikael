@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using ParkingLot.Data;
 using ParkingLotKata2;
 
 namespace ConsoleApp1
@@ -8,13 +9,25 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            var sut = new ParkingLot(100, new LongTermDiscounter(), new VehicleCostWithdrawalStrategyFactory(
+            DotNetEnv.Env.Load();
+            var dbSettings = new DatabaseSettings
+            {
+                ConnectionString = Environment.GetEnvironmentVariable("ConnectionString"),
+                DatabaseName = Environment.GetEnvironmentVariable("DatabaseName"),
+                CollectionName = Environment.GetEnvironmentVariable("CollectionName")
+            };
+            var context = new DbContext(dbSettings);
+            var repository = new VehicleRepository<IVehicle>(context);
+
+            MongoMapping.Map();
+
+            var sut = new ParkingLotKata2.ParkingLot(100, new LongTermDiscounter(), new VehicleCostWithdrawalStrategyFactory(
                 new List<IVehicleCostCalculationStrategy>
                 {
                     new BusCostCalculationStrategy(), new CarCostCalculationStrategy(),
                     new HelicopterCostCalculationStrategy(), new ElectricCarCostCalculationStrategy(),
                     new MotorCycleCostCalculationStrategy()
-                }), new CalculateSpaces(2), new LicenseVerifier());
+                }), new CalculateSpaces(2), new LicenseVerifier(), repository);
 
             var driver = new Driver();
 

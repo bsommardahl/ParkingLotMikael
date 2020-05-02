@@ -35,7 +35,7 @@ namespace ConsoleApp1
             {
                 try
                 {
-                    Console.WriteLine("Park or Unpark, AddMoney?");
+                    Console.WriteLine("Park or Unpark, AddMoney, list?");
                     var action = Console.ReadLine();
 
 
@@ -52,6 +52,13 @@ namespace ConsoleApp1
                         Console.WriteLine("adding money, amount?");
                         var amount = Convert.ToInt32(Console.ReadLine());
                         driver.AddToWallet(amount);
+                    }
+                    else if (action.ToUpper().Contains("L"))
+                    {
+                        foreach (var vehicle in repository.Get())
+                        {
+                            Console.WriteLine(vehicle.License);
+                        }
                     }
                     else
                     {

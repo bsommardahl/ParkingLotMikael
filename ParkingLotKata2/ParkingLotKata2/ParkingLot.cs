@@ -13,8 +13,6 @@ namespace ParkingLotKata2
         private readonly IGenericRepository<IVehicle> _repository;
 
         readonly int _originalSpaces;
-        public double Spaces;
-
 
         public ParkingLot(int spaces, ILongTermDiscounter longTermDiscounter,
             IVehicleCostWithdrawalStrategyFactory vehicleCostWithdrawalStrategyFactory,
@@ -26,7 +24,6 @@ namespace ParkingLotKata2
             _calculateSpaces = calculateSpaces;
             _licenseVerifier = licenseVerifier;
             _repository = repository;
-            Spaces = spaces;
 
         }
 
@@ -41,15 +38,14 @@ namespace ParkingLotKata2
             if (vehicle.Length < 1) throw new VehicleHasNoLengthException();
             if (_licenseVerifier.IsInvalid(vehicle.License)) throw new InvalidLicenseException();
 
-            var noMoreSpaces = Spaces == 0;
+            var availableSpaces = GetAvailableSpaces();
+            var noMoreSpaces = availableSpaces == 0;
 
             var spacesToRemove = _calculateSpaces.GetSpaces(vehicle);
-            var vehicleBiggerThanSpacesLeft = spacesToRemove > Spaces;
+            var vehicleBiggerThanSpacesLeft = spacesToRemove > availableSpaces;
             if (noMoreSpaces || vehicleBiggerThanSpacesLeft)
                 throw new NoMoreSpaceException();
-
-            Spaces = GetAvailableSpaces() - spacesToRemove;
-            _repository.Create(vehicle);
+            _repository.Add(vehicle);
         }
 
         public void UnparkVehicle(string license, int days)
@@ -67,8 +63,6 @@ namespace ParkingLotKata2
             vehicle.Driver.Withdraw(discountedAmount);
 
             _repository.Remove(vehicle);
-            var spacesToAddBack = _calculateSpaces.GetSpaces(vehicle);
-            Spaces += spacesToAddBack;
         }
 
         private double GetTheAmount<T>(T vehicle, int days) where T : IVehicle

@@ -22,7 +22,7 @@ namespace ParkingLot.Data
             _items.Find(item => item.License == id).FirstOrDefault();
 
 
-        public T Create(T item)
+        public T Add(T item)
         {
             _items.InsertOne(item);
             return item;

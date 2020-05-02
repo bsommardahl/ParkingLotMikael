@@ -8,6 +8,7 @@ namespace TestProject1
     {
         readonly Driver driver;
         readonly int _startingBalance;
+        private readonly Car _vehicle;
 
         public when_unparking_a_vehicle()
         {
@@ -15,18 +16,18 @@ namespace TestProject1
             _startingBalance = 10;
             driver = new Driver();
             driver.AddToWallet(_startingBalance);
-            var vehicle = new Car(driver, "license");
-            sut.ParkVehicle(vehicle);
+            _vehicle = new Car(driver, "license");
+            sut.ParkVehicle(_vehicle);
 
             //Act
-            sut.UnparkVehicle(vehicle.License, 1);
+            sut.UnparkVehicle(_vehicle.License, 1);
         }
 
         [Fact]
         public void should_replace_the_spaces()
         {
             //Assert
-            sut.Spaces.Should().Be(100);
+            _fakeRepository.Vehicles.Should().NotContain(_vehicle);
         }
 
         [Fact]

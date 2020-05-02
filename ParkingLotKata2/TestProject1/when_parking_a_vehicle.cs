@@ -10,10 +10,11 @@ namespace TestProject1
         public void should_allow_it()
         {
             //Act
-            sut.ParkVehicle(new Car(new Driver(), "license"));
+            var vehicle = new Car(new Driver(), "license");
+            sut.ParkVehicle(vehicle);
 
             //Assert
-            sut.Spaces.Should().Be(99);
+            _fakeRepository.Vehicles.Should().Contain(vehicle);
         }
     }
 }

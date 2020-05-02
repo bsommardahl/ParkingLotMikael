@@ -45,24 +45,26 @@ namespace XUnitTestProject1
 
     public class when_parking_a_vehicle_with_valid_license : given_a_parking_lot
     {
+        private readonly IVehicle _vehicle;
+
         public when_parking_a_vehicle_with_valid_license()
         {
             //Arrange
             var metersPerSpace = 2;
-            var vehicle = A.Fake<IVehicle>();
-            A.CallTo(() => vehicle.Length).Returns(metersPerSpace);
-            A.CallTo(() => _calculateSpaces.GetSpaces(vehicle)).Returns(1);
-            A.CallTo(() => _licenseVerifier.IsInvalid(vehicle.License)).Returns(false);
+            _vehicle = A.Fake<IVehicle>();
+            A.CallTo(() => _vehicle.Length).Returns(metersPerSpace);
+            A.CallTo(() => _calculateSpaces.GetSpaces(_vehicle)).Returns(1);
+            A.CallTo(() => _licenseVerifier.IsInvalid(_vehicle.License)).Returns(false);
 
             //Act
-            Sut.ParkVehicle(vehicle);
+            Sut.ParkVehicle(_vehicle);
         }
 
         [Fact]
         public void should_allow_the_vehicle_to_be_parked()
         {
             //Assert
-            Sut.Spaces.Should().Be(99);
+            A.CallTo(() => _vehicleRepository.Add(_vehicle)).MustHaveHappened();
         }
     }
 }

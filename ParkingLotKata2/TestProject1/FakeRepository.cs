@@ -7,28 +7,28 @@ namespace TestProject1
 {
     public class FakeRepository<T> : IGenericRepository<T> where T : class
     {
-        private readonly List<Vehicle> _vehicles;
+        public readonly List<Vehicle> Vehicles;
 
         public FakeRepository()
 
         {
-            _vehicles = new List<Vehicle>();
+            Vehicles = new List<Vehicle>();
         }
 
         public IEnumerable<T> Get()
         {
-            return (IEnumerable<T>)_vehicles;
+            return (IEnumerable<T>)Vehicles;
         }
 
         public T Get(string id)
         {
-            var vehicle= _vehicles.FirstOrDefault(x => x.License == id);
+            var vehicle = Vehicles.FirstOrDefault(x => x.License == id);
             return vehicle as T;
         }
 
-        public T Create(T item)
+        public T Add(T item)
         {
-            _vehicles.Add(item as Vehicle);
+            Vehicles.Add(item as Vehicle);
             return item;
         }
 
@@ -39,7 +39,7 @@ namespace TestProject1
 
         public void Remove(T item)
         {
-            _vehicles.Remove(item as Vehicle);
+            Vehicles.Remove(item as Vehicle);
         }
 
         public void Remove(string id)

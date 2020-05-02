@@ -92,7 +92,6 @@ namespace XUnitTestProject1.when_unparking
             A.CallTo(() => _vehicleRepository.Get(_license)).Returns(_vehicle);
 
             //Act
-            Sut.ParkVehicle(_vehicle);
             Sut.UnparkVehicle(_license, _days);
         }
 
@@ -100,7 +99,7 @@ namespace XUnitTestProject1.when_unparking
         public void should_add_spaces_back()
         {
             //Assert
-            Sut.Spaces.Should().Be(_originalAmountOfSpaces);
+            A.CallTo(() => _vehicleRepository.Remove(_vehicle)).MustHaveHappened();
         }
 
         [Fact]

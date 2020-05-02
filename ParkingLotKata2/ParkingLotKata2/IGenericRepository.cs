@@ -7,7 +7,7 @@ namespace ParkingLotKata2
     {
         IEnumerable<T> Get();
         T Get(string id);
-        T Create(T item);
+        T Add(T item);
         void Update(string id, T newItem);
         void Remove(T removeItem);
         void Remove(string id);

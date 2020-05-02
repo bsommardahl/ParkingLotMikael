@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4d329191-c141-4d06-b953-584ded39c913" name="Default Changelist" comment="" />
+    <list default="true" id="4d329191-c141-4d06-b953-584ded39c913" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ParkingLotKata2/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ParkingLotKata2/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ParkingLotKata2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ParkingLotKata2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ConsoleApp2/MongoMapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ConsoleApp2/MongoMapping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParkingLot.Data/VehicleRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingLot.Data/VehicleRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ParkingLotKata2/Driver.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ParkingLotKata2/Driver.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IVehicleCostWithdrawalStrategyFactory.cs" root0="FORCE_HIGHLIGHTING" />
@@ -14,33 +23,41 @@
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Vehicle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IVehicleCostCalculationStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Driver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EECC55F8-6D3B-46EF-9F04-DCE2C8958DEE/9d/d9d8ece4/IMongoCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/VehicleCostWithdrawalStrategyFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Helicopter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ConsoleApp2/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EECC55F8-6D3B-46EF-9F04-DCE2C8958DEE/2f/6032544f/FindFluent`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/NoMatchingVehicleCostWithdrawalStrategyException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_creating_a_cost_calculation_strategy/with_valid_vehicle_type.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_creating_a_cost_calculation_strategy/with_invalid_vehicle_type.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EECC55F8-6D3B-46EF-9F04-DCE2C8958DEE/f0/2c7d9d55/IFindFluentExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IDriver.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IVehicle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/MotorCycleCostCalculationStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/Bus.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/60817C40-31A4-4E25-ACCF-5B4B8AA8E7A6/A0/Nullable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/BusCostCalculationStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ElectricCarCostCalculationStrategy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/HelicopterCostCalculationStrategy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B83CB949-B3BE-45C9-B8AC-59D21923B73A/ef/3777a5c2/IAsyncCursorSourceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestProject1/given_an_integrated_parking_lot.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_calculating_spaces.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ILongTermDiscounter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/LongTermDiscounter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_lot_is_full.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_withdrawing_the_cost/when_withdrawing_the_cost_for_a_car.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_unparking/when_unparking_a_known_vehicle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_parking/when_parking_a_vehicle_with_valid_license.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestProject1/when_parking_a_vehicle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ConsoleApp2/MongoMapping.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_3_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/XUnitTestProject1/when_discounting_long_term_parking/when_vehicle_has_stayed_for_6_or_more_days.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/18D5A60D-361A-4AFD-A431-F772FA87FCC3/11/302bf22f/TestInvoker`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/LicenseVerifier.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLot.Data/VehicleRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ParkingLotKata2/IGenericRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AA6B9DF4-C9D9-49A9-9193-CCAB9AA29A85/68/1c669e05/BsonClassMap.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/UnknownVehicleException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/ILicenseVerifier.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/ParkingLotKata2/InvalidLicenseException.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,13 +66,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/XUnitTestProject1/IVehicleStrategy.cs" />
-        <option value="$PROJECT_DIR$/XUnitTestProject1/IParkingLotSizeStrategy.cs" />
-        <option value="$PROJECT_DIR$/ParkingLotKata2/VehicleCostCalculationStrategyFactory.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/When_a_Car_Parks.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/when_creating_a_strategy_for_vehicle_cost_withdrawal.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/VehicleCostWithdrawal/when_creating_a_strategy_for_vehicle_cost_withdrawal.cs" />
-        <option value="$PROJECT_DIR$/ParkingLotKata2/Driver.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/IParkingLotSizeStrategy.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/CarSizeStrategy.cs" />
         <option value="$PROJECT_DIR$/XUnitTestProject1/When_a_Vehicle_Parks_In_A_Parking_Lot.cs" />
@@ -100,10 +113,15 @@
         <option value="$PROJECT_DIR$/ParkingLotKata2/DummyLicenseVerifier.cs" />
         <option value="$PROJECT_DIR$/ParkingLotKata2/LicenseVerifier.cs" />
         <option value="$PROJECT_DIR$/TestProject1/given_an_integrated_parking_lot.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApp2/ConsoleApp2.csproj" />
+        <option value="$PROJECT_DIR$/ParkingLotKata2/Driver.cs" />
+        <option value="$PROJECT_DIR$/ParkingLot.Data/VehicleRepository.cs" />
+        <option value="$PROJECT_DIR$/ConsoleApp2/MongoMapping.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1ZlUZYVDf0s296wb9gaW9Oq75Wj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -112,6 +130,7 @@
   <component name="PropertiesComponent">
     <property name="Rider.SolutionExplorerActivator" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.3" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -175,7 +194,8 @@
       <updated>1585413230018</updated>
       <workItem from="1585413235285" duration="3547000" />
       <workItem from="1585923848300" duration="7496000" />
-      <workItem from="1587042886888" duration="8179000" />
+      <workItem from="1587042886888" duration="8268000" />
+      <workItem from="1587819945028" duration="4750000" />
     </task>
     <servers />
   </component>
@@ -183,115 +203,144 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="563" height="485" key="DebuggerActiveHint" timestamp="1587402044777">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state x="418" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588425761287">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="418" y="184" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1588425761287" />
+    <state width="740" height="579" key="DebuggerActiveHint" timestamp="1588428946072">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="519" height="466" key="DebuggerActiveHint/0.0.1347.849@0.0.1347.849" timestamp="1586441008786" />
     <state width="563" height="485" key="DebuggerActiveHint/0.0.1461.883@0.0.1461.883" timestamp="1587402044777" />
-    <state width="705" height="275" key="GridCell.Tab.0.bottom" timestamp="1587401954398">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="740" height="579" key="DebuggerActiveHint/0.0.1920.1053@0.0.1920.1053" timestamp="1588428946072" />
+    <state width="935" height="278" key="GridCell.Tab.0.bottom" timestamp="1588429045670">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.0.bottom/0.0.1347.849@0.0.1347.849" timestamp="1586441153548" />
-    <state width="705" height="275" key="GridCell.Tab.0.bottom/0.0.1461.883@0.0.1461.883" timestamp="1587401954398" />
-    <state width="705" height="275" key="GridCell.Tab.0.center" timestamp="1587401954394">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="706" height="222" key="GridCell.Tab.0.bottom/0.0.1461.883@0.0.1461.883" timestamp="1587668557662" />
+    <state width="935" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1588429045670" />
+    <state width="935" height="278" key="GridCell.Tab.0.center" timestamp="1588429045669">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.0.center/0.0.1347.849@0.0.1347.849" timestamp="1586441153545" />
-    <state width="705" height="275" key="GridCell.Tab.0.center/0.0.1461.883@0.0.1461.883" timestamp="1587401954394" />
-    <state width="705" height="275" key="GridCell.Tab.0.left" timestamp="1587401954393">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="706" height="222" key="GridCell.Tab.0.center/0.0.1461.883@0.0.1461.883" timestamp="1587668557659" />
+    <state width="935" height="278" key="GridCell.Tab.0.center/0.0.1920.1053@0.0.1920.1053" timestamp="1588429045669" />
+    <state width="935" height="278" key="GridCell.Tab.0.left" timestamp="1588429045668">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.0.left/0.0.1347.849@0.0.1347.849" timestamp="1586441153545" />
-    <state width="705" height="275" key="GridCell.Tab.0.left/0.0.1461.883@0.0.1461.883" timestamp="1587401954393" />
-    <state width="705" height="275" key="GridCell.Tab.0.right" timestamp="1587401954398">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="706" height="222" key="GridCell.Tab.0.left/0.0.1461.883@0.0.1461.883" timestamp="1587668557658" />
+    <state width="935" height="278" key="GridCell.Tab.0.left/0.0.1920.1053@0.0.1920.1053" timestamp="1588429045668" />
+    <state width="935" height="278" key="GridCell.Tab.0.right" timestamp="1588429045669">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.0.right/0.0.1347.849@0.0.1347.849" timestamp="1586441153547" />
-    <state width="705" height="275" key="GridCell.Tab.0.right/0.0.1461.883@0.0.1461.883" timestamp="1587401954398" />
-    <state width="705" height="275" key="GridCell.Tab.1.bottom" timestamp="1587401982546">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="706" height="222" key="GridCell.Tab.0.right/0.0.1461.883@0.0.1461.883" timestamp="1587668557660" />
+    <state width="935" height="278" key="GridCell.Tab.0.right/0.0.1920.1053@0.0.1920.1053" timestamp="1588429045669" />
+    <state width="934" height="342" key="GridCell.Tab.1.bottom" timestamp="1588429029118">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.1.bottom/0.0.1347.849@0.0.1347.849" timestamp="1586441153552" />
-    <state width="705" height="275" key="GridCell.Tab.1.bottom/0.0.1461.883@0.0.1461.883" timestamp="1587401982546" />
-    <state width="705" height="275" key="GridCell.Tab.1.center" timestamp="1587401982543">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.1.bottom/0.0.1461.883@0.0.1461.883" timestamp="1587668557630" />
+    <state width="934" height="342" key="GridCell.Tab.1.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029118" />
+    <state width="934" height="342" key="GridCell.Tab.1.center" timestamp="1588429029117">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.1.center/0.0.1347.849@0.0.1347.849" timestamp="1586441153550" />
-    <state width="705" height="275" key="GridCell.Tab.1.center/0.0.1461.883@0.0.1461.883" timestamp="1587401982543" />
-    <state width="705" height="275" key="GridCell.Tab.1.left" timestamp="1587401982542">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.1.center/0.0.1461.883@0.0.1461.883" timestamp="1587668557629" />
+    <state width="934" height="342" key="GridCell.Tab.1.center/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029117" />
+    <state width="934" height="342" key="GridCell.Tab.1.left" timestamp="1588429029116">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.1.left/0.0.1347.849@0.0.1347.849" timestamp="1586441153549" />
-    <state width="705" height="275" key="GridCell.Tab.1.left/0.0.1461.883@0.0.1461.883" timestamp="1587401982542" />
-    <state width="705" height="275" key="GridCell.Tab.1.right" timestamp="1587401982544">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.1.left/0.0.1461.883@0.0.1461.883" timestamp="1587668557628" />
+    <state width="934" height="342" key="GridCell.Tab.1.left/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029116" />
+    <state width="934" height="342" key="GridCell.Tab.1.right" timestamp="1588429029117">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.1.right/0.0.1347.849@0.0.1347.849" timestamp="1586441153551" />
-    <state width="705" height="275" key="GridCell.Tab.1.right/0.0.1461.883@0.0.1461.883" timestamp="1587401982544" />
-    <state width="705" height="275" key="GridCell.Tab.2.bottom" timestamp="1587401954240">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.1.right/0.0.1461.883@0.0.1461.883" timestamp="1587668557630" />
+    <state width="934" height="342" key="GridCell.Tab.1.right/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029117" />
+    <state width="934" height="342" key="GridCell.Tab.2.bottom" timestamp="1588429029120">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.2.bottom/0.0.1347.849@0.0.1347.849" timestamp="1586441153554" />
-    <state width="705" height="275" key="GridCell.Tab.2.bottom/0.0.1461.883@0.0.1461.883" timestamp="1587401954240" />
-    <state width="705" height="275" key="GridCell.Tab.2.center" timestamp="1587401954236">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.2.bottom/0.0.1461.883@0.0.1461.883" timestamp="1587668557634" />
+    <state width="934" height="342" key="GridCell.Tab.2.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029120" />
+    <state width="934" height="342" key="GridCell.Tab.2.center" timestamp="1588429029119">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.2.center/0.0.1347.849@0.0.1347.849" timestamp="1586441153553" />
-    <state width="705" height="275" key="GridCell.Tab.2.center/0.0.1461.883@0.0.1461.883" timestamp="1587401954236" />
-    <state width="705" height="275" key="GridCell.Tab.2.left" timestamp="1587401954235">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.2.center/0.0.1461.883@0.0.1461.883" timestamp="1587668557632" />
+    <state width="934" height="342" key="GridCell.Tab.2.center/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029119" />
+    <state width="934" height="342" key="GridCell.Tab.2.left" timestamp="1588429029118">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.2.left/0.0.1347.849@0.0.1347.849" timestamp="1586441153552" />
-    <state width="705" height="275" key="GridCell.Tab.2.left/0.0.1461.883@0.0.1461.883" timestamp="1587401954235" />
-    <state width="705" height="275" key="GridCell.Tab.2.right" timestamp="1587401954238">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.2.left/0.0.1461.883@0.0.1461.883" timestamp="1587668557631" />
+    <state width="934" height="342" key="GridCell.Tab.2.left/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029118" />
+    <state width="934" height="342" key="GridCell.Tab.2.right" timestamp="1588429029119">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.2.right/0.0.1347.849@0.0.1347.849" timestamp="1586441153554" />
-    <state width="705" height="275" key="GridCell.Tab.2.right/0.0.1461.883@0.0.1461.883" timestamp="1587401954238" />
-    <state width="705" height="275" key="GridCell.Tab.3.bottom" timestamp="1587401954245">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.2.right/0.0.1461.883@0.0.1461.883" timestamp="1587668557633" />
+    <state width="934" height="342" key="GridCell.Tab.2.right/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029119" />
+    <state width="934" height="342" key="GridCell.Tab.3.bottom" timestamp="1588429029122">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.3.bottom/0.0.1347.849@0.0.1347.849" timestamp="1586441153557" />
-    <state width="705" height="275" key="GridCell.Tab.3.bottom/0.0.1461.883@0.0.1461.883" timestamp="1587401954245" />
-    <state width="705" height="275" key="GridCell.Tab.3.center" timestamp="1587401954243">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.3.bottom/0.0.1461.883@0.0.1461.883" timestamp="1587668557638" />
+    <state width="934" height="342" key="GridCell.Tab.3.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029122" />
+    <state width="934" height="342" key="GridCell.Tab.3.center" timestamp="1588429029121">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.3.center/0.0.1347.849@0.0.1347.849" timestamp="1586441153556" />
-    <state width="705" height="275" key="GridCell.Tab.3.center/0.0.1461.883@0.0.1461.883" timestamp="1587401954243" />
-    <state width="705" height="275" key="GridCell.Tab.3.left" timestamp="1587401954241">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.3.center/0.0.1461.883@0.0.1461.883" timestamp="1587668557636" />
+    <state width="934" height="342" key="GridCell.Tab.3.center/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029121" />
+    <state width="934" height="342" key="GridCell.Tab.3.left" timestamp="1588429029120">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.3.left/0.0.1347.849@0.0.1347.849" timestamp="1586441153555" />
-    <state width="705" height="275" key="GridCell.Tab.3.left/0.0.1461.883@0.0.1461.883" timestamp="1587401954241" />
-    <state width="705" height="275" key="GridCell.Tab.3.right" timestamp="1587401954244">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.3.left/0.0.1461.883@0.0.1461.883" timestamp="1587668557635" />
+    <state width="934" height="342" key="GridCell.Tab.3.left/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029120" />
+    <state width="934" height="342" key="GridCell.Tab.3.right" timestamp="1588429029122">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.3.right/0.0.1347.849@0.0.1347.849" timestamp="1586441153556" />
-    <state width="705" height="275" key="GridCell.Tab.3.right/0.0.1461.883@0.0.1461.883" timestamp="1587401954244" />
-    <state width="705" height="275" key="GridCell.Tab.4.bottom" timestamp="1587401954249">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.3.right/0.0.1461.883@0.0.1461.883" timestamp="1587668557637" />
+    <state width="934" height="342" key="GridCell.Tab.3.right/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029122" />
+    <state width="934" height="342" key="GridCell.Tab.4.bottom" timestamp="1588429029124">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.4.bottom/0.0.1347.849@0.0.1347.849" timestamp="1586441153560" />
-    <state width="705" height="275" key="GridCell.Tab.4.bottom/0.0.1461.883@0.0.1461.883" timestamp="1587401954249" />
-    <state width="705" height="275" key="GridCell.Tab.4.center" timestamp="1587401954247">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.4.bottom/0.0.1461.883@0.0.1461.883" timestamp="1587668557641" />
+    <state width="934" height="342" key="GridCell.Tab.4.bottom/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029124" />
+    <state width="934" height="342" key="GridCell.Tab.4.center" timestamp="1588429029123">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.4.center/0.0.1347.849@0.0.1347.849" timestamp="1586441153559" />
-    <state width="705" height="275" key="GridCell.Tab.4.center/0.0.1461.883@0.0.1461.883" timestamp="1587401954247" />
-    <state width="705" height="275" key="GridCell.Tab.4.left" timestamp="1587401954246">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.4.center/0.0.1461.883@0.0.1461.883" timestamp="1587668557639" />
+    <state width="934" height="342" key="GridCell.Tab.4.center/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029123" />
+    <state width="934" height="342" key="GridCell.Tab.4.left" timestamp="1588429029123">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.4.left/0.0.1347.849@0.0.1347.849" timestamp="1586441153558" />
-    <state width="705" height="275" key="GridCell.Tab.4.left/0.0.1461.883@0.0.1461.883" timestamp="1587401954246" />
-    <state width="705" height="275" key="GridCell.Tab.4.right" timestamp="1587401954248">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state width="705" height="275" key="GridCell.Tab.4.left/0.0.1461.883@0.0.1461.883" timestamp="1587668557638" />
+    <state width="934" height="342" key="GridCell.Tab.4.left/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029123" />
+    <state width="934" height="342" key="GridCell.Tab.4.right" timestamp="1588429029124">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state width="649" height="262" key="GridCell.Tab.4.right/0.0.1347.849@0.0.1347.849" timestamp="1586441153560" />
-    <state width="705" height="275" key="GridCell.Tab.4.right/0.0.1461.883@0.0.1461.883" timestamp="1587401954248" />
+    <state width="705" height="275" key="GridCell.Tab.4.right/0.0.1461.883@0.0.1461.883" timestamp="1587668557640" />
+    <state width="934" height="342" key="GridCell.Tab.4.right/0.0.1920.1053@0.0.1920.1053" timestamp="1588429029124" />
     <state x="268" y="159" width="802" height="526" key="Rider.ProjectTemplateDialog.Size" timestamp="1586438112049">
       <screen x="0" y="0" width="1347" height="849" />
     </state>
     <state x="268" y="159" width="802" height="526" key="Rider.ProjectTemplateDialog.Size/0.0.1347.849@0.0.1347.849" timestamp="1586438112049" />
+    <state x="556" y="196" width="799" height="656" key="RiderGenerateDialog" timestamp="1588429312797">
+      <screen x="0" y="0" width="1920" height="1053" />
+    </state>
+    <state x="556" y="196" width="799" height="656" key="RiderGenerateDialog/0.0.1920.1053@0.0.1920.1053" timestamp="1588429312797" />
     <state x="163" y="46" key="SettingsEditor" timestamp="1585415233494">
       <screen x="0" y="0" width="1348" height="823" />
     </state>
@@ -305,11 +354,83 @@
       <screen x="0" y="0" width="1461" height="883" />
     </state>
     <state x="393" y="199" key="run.anything.popup/0.0.1461.883@0.0.1461.883" timestamp="1587043768609" />
-    <state x="382" y="149" width="729" height="735" key="search.everywhere.popup" timestamp="1587574732987">
-      <screen x="0" y="0" width="1461" height="883" />
+    <state x="502" y="178" width="959" height="877" key="search.everywhere.popup" timestamp="1588427535515">
+      <screen x="0" y="0" width="1920" height="1053" />
     </state>
     <state x="352" y="143" width="672" height="706" key="search.everywhere.popup/0.0.1347.849@0.0.1347.849" timestamp="1586441344228" />
     <state x="370" y="137" width="672" height="678" key="search.everywhere.popup/0.0.1414.816@0.0.1414.816" timestamp="1585666182344" />
     <state x="382" y="149" width="729" height="735" key="search.everywhere.popup/0.0.1461.883@0.0.1461.883" timestamp="1587574732987" />
+    <state x="502" y="178" width="959" height="877" key="search.everywhere.popup/0.0.1920.1053@0.0.1920.1053" timestamp="1588427535515" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs</url>
+          <line>56</line>
+          <properties documentPath="$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" initialLine="56">
+            <startOffsets>
+              <option value="2217" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2258" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs</url>
+          <line>53</line>
+          <properties documentPath="$PROJECT_DIR$/ParkingLotKata2/ParkingLot.cs" initialLine="53">
+            <startOffsets>
+              <option value="2130" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2150" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ParkingLot.Data/VehicleRepository.cs</url>
+          <line>23</line>
+          <properties documentPath="$PROJECT_DIR$/ParkingLot.Data/VehicleRepository.cs" initialLine="23">
+            <startOffsets>
+              <option value="620" />
+            </startOffsets>
+            <endOffsets>
+              <option value="635" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B83CB949-B3BE-45C9-B8AC-59D21923B73A/ef/3777a5c2/IAsyncCursorSourceExtensions.cs</url>
+          <line>61</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B83CB949-B3BE-45C9-B8AC-59D21923B73A/ef/3777a5c2/IAsyncCursorSourceExtensions.cs" initialLine="61">
+            <startOffsets>
+              <option value="2819" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2869" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B83CB949-B3BE-45C9-B8AC-59D21923B73A/ef/3777a5c2/IAsyncCursorSourceExtensions.cs</url>
+          <line>60</line>
+          <properties documentPath="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B83CB949-B3BE-45C9-B8AC-59D21923B73A/ef/3777a5c2/IAsyncCursorSourceExtensions.cs" initialLine="60">
+            <startOffsets>
+              <option value="2735" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2810" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

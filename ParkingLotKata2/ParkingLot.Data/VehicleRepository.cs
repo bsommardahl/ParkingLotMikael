@@ -18,8 +18,11 @@ namespace ParkingLot.Data
         public IEnumerable<T> Get() =>
             _items.Find(item => true).ToList();
 
-        public T Get(string id) =>
-            _items.Find(item => item.License == id).FirstOrDefault();
+        public T Get(string id)
+        {
+            var vehicle = _items.Find(item => item.License == id).First();
+            return vehicle;
+        }
 
 
         public T Add(T item)

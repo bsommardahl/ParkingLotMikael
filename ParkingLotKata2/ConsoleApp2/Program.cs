@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using ConsoleApp2;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Conventions;
 using ParkingLot.Data;
 using ParkingLotKata2;
 
@@ -9,6 +12,9 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
+
+            // BsonSerializer.RegisterSerializer(typeof(IVehicle), new ParkingLotSerializer());
+
             DotNetEnv.Env.Load();
             var dbSettings = new DatabaseSettings
             {
@@ -18,6 +24,7 @@ namespace ConsoleApp1
             };
             var context = new DbContext(dbSettings);
             var repository = new VehicleRepository<IVehicle>(context);
+
 
             MongoMapping.Map();
 

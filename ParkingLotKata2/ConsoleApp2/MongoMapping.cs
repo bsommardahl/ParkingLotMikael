@@ -1,15 +1,20 @@
 ﻿using System;
+using System.Linq.Expressions;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.IdGenerators;
+using MongoDB.Bson.Serialization.Serializers;
 using ParkingLotKata2;
 
 namespace ConsoleApp1
 {
-    
+
 
     public static class MongoMapping
     {
         public static void Map()
         {
+
             BsonClassMap.RegisterClassMap<Driver>(cm =>
             {
                 cm.AutoMap();
@@ -18,14 +23,23 @@ namespace ConsoleApp1
             BsonClassMap.RegisterClassMap<Vehicle>(cm =>
             {
                 cm.AutoMap();
+                cm.MapIdMember(c => c.Id);
+
+                //cm.MapIdMember(c => c.Id).SetIdGenerator(StringObjectIdGenerator.Instance)
+                //    .SetSerializer(new StringSerializer(BsonType.ObjectId));
                 cm.SetIsRootClass(true);
-                cm.MapIdProperty(c => c.License);
                 cm.MapMember(c => c.Driver);
+                // cm.MapField(c => c.License).SetElementName("License");
+
+
+
             });
+
             BsonClassMap.RegisterClassMap<Car>(cm =>
             {
                 cm.AutoMap();
                 cm.MapCreator(c => new Car(c.Driver, c.License, c.HasTrumpSticker));
+
             });
 
             // BsonClassMap.RegisterClassMap<Bus>(cm =>

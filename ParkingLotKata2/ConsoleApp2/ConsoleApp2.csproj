@@ -13,6 +13,7 @@
 	<ItemGroup>
 		<ProjectReference Include="..\ParkingLot.Data\ParkingLot.Data.csproj" />
 		<ProjectReference Include="..\ParkingLotKata2\ParkingLotKata2.csproj" />
+		<ProjectReference Include="..\TestProject1\TestProject1.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

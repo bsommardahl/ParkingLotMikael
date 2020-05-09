@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using ConsoleApp2;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Conventions;
 using ParkingLot.Data;
 using ParkingLotKata2;
+using TestProject1;
 
 namespace ConsoleApp1
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-
             // BsonSerializer.RegisterSerializer(typeof(IVehicle), new ParkingLotSerializer());
 
             DotNetEnv.Env.Load();
+            //MongoMapping.Map();
+
             var dbSettings = new DatabaseSettings
             {
                 ConnectionString = Environment.GetEnvironmentVariable("ConnectionString"),
@@ -23,23 +26,23 @@ namespace ConsoleApp1
                 CollectionName = Environment.GetEnvironmentVariable("CollectionName")
             };
             var context = new DbContext(dbSettings);
-            var repository = new VehicleRepository<IVehicle>(context);
+            //var repository = new VehicleRepository<IVehicle>(context);
+            var repository = new FakeRepository<IVehicle>();
 
 
-            MongoMapping.Map();
-
-            var sut = new ParkingLotKata2.ParkingLot(100, new LongTermDiscounter(), new VehicleCostWithdrawalStrategyFactory(
-                new List<IVehicleCostCalculationStrategy>
-                {
-                    new BusCostCalculationStrategy(), new CarCostCalculationStrategy(),
-                    new HelicopterCostCalculationStrategy(), new ElectricCarCostCalculationStrategy(),
-                    new MotorCycleCostCalculationStrategy()
-                }), new CalculateSpaces(2), new LicenseVerifier(), repository);
+            var sut = new ParkingLotKata2.ParkingLot(100, new LongTermDiscounter(),
+                new VehicleCostWithdrawalStrategyFactory(
+                    new List<IVehicleCostCalculationStrategy>
+                    {
+                        new BusCostCalculationStrategy(), new CarCostCalculationStrategy(),
+                        new HelicopterCostCalculationStrategy(), new ElectricCarCostCalculationStrategy(),
+                        new MotorCycleCostCalculationStrategy()
+                    }), new CalculateSpaces(2), new LicenseVerifier(), repository);
 
             var driver = new Driver();
+            driver.AddToWallet(200);
 
             while (true)
-            {
                 try
                 {
                     Console.WriteLine("Park or Unpark, AddMoney, list?");
@@ -51,8 +54,8 @@ namespace ConsoleApp1
                     {
                         Console.WriteLine("parking, license number?");
                         var licenseNumber = Console.ReadLine();
-                        var car = new Car(driver, licenseNumber);
-                        sut.ParkVehicle(car);
+                        var car = new Car(new Guid(), driver, licenseNumber);
+                        await sut.ParkVehicle(car);
                     }
                     else if (action.ToUpper().Contains("A"))
                     {
@@ -62,10 +65,9 @@ namespace ConsoleApp1
                     }
                     else if (action.ToUpper().Contains("L"))
                     {
-                        foreach (var vehicle in repository.Get())
-                        {
+                        var enumerable = await repository.Get();
+                        foreach (var vehicle in enumerable) 
                             Console.WriteLine(vehicle.License);
-                        }
                     }
                     else
                     {
@@ -79,7 +81,6 @@ namespace ConsoleApp1
                     Console.WriteLine(e.Message);
                     throw;
                 }
-            }
         }
     }
 }

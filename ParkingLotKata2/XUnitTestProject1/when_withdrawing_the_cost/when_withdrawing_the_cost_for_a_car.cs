@@ -1,3 +1,4 @@
+using System;
 using FakeItEasy;
 using FluentAssertions;
 using ParkingLotKata2;
@@ -15,7 +16,7 @@ namespace XUnitTestProject1
             var driver = A.Fake<IDriver>();
 
             //Act
-            var amount = sut.Execute(new Car(driver, "license"), 1);
+            var amount = sut.Execute(new Car(new Guid(), driver, "license"), 1);
 
             //Assert
             amount.Should().Be(5);

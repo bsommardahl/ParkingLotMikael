@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using FakeItEasy;
 using FluentAssertions;
 using ParkingLotKata2;
@@ -16,7 +17,7 @@ namespace XUnitTestProject1
             A.CallTo(() => vehicle.Length).Returns(0);
 
             //Act
-            Action park = () => Sut.ParkVehicle(vehicle);
+            Func<Task> park = async () => await Sut.ParkVehicle(vehicle);
 
             //Assert
             park.Should().Throw<VehicleHasNoLengthException>();
@@ -36,7 +37,7 @@ namespace XUnitTestProject1
             A.CallTo(() => _licenseVerifier.IsInvalid(license)).Returns(true);
 
             //Act
-            Action park = () => Sut.ParkVehicle(vehicleWithInvalidLicense);
+            Func<Task> park = async () => await Sut.ParkVehicle(vehicleWithInvalidLicense);
 
             //Assert
             park.Should().Throw<InvalidLicenseException>();

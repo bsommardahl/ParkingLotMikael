@@ -8,12 +8,11 @@ using ParkingLotKata2;
 
 namespace ConsoleApp1
 {
-
-
     public static class MongoMapping
     {
         public static void Map()
         {
+            //BsonSerializer.RegisterSerializer<IVehicle>(new ImpliedImplementationInterfaceSerializer<IVehicle, Vehicle>(BsonSerializer.LookupSerializer<Vehicle>()));
 
             BsonClassMap.RegisterClassMap<Driver>(cm =>
             {
@@ -22,24 +21,24 @@ namespace ConsoleApp1
             });
             BsonClassMap.RegisterClassMap<Vehicle>(cm =>
             {
-                cm.AutoMap();
-                cm.MapIdMember(c => c.Id);
+                // cm.AutoMap();
+                //cm.MapIdMember(c => c.Id);
 
-                //cm.MapIdMember(c => c.Id).SetIdGenerator(StringObjectIdGenerator.Instance)
-                //    .SetSerializer(new StringSerializer(BsonType.ObjectId));
+                cm.MapIdMember(c => c.Id)
+                    .SetIdGenerator(CombGuidGenerator.Instance)
+                    //.SetSerializer(new GuidSerializer(BsonType.ObjectId))
+                    ;
+
                 cm.SetIsRootClass(true);
                 cm.MapMember(c => c.Driver);
+                cm.MapProperty(c => c.License);
                 // cm.MapField(c => c.License).SetElementName("License");
-
-
-
             });
 
             BsonClassMap.RegisterClassMap<Car>(cm =>
             {
                 cm.AutoMap();
-                cm.MapCreator(c => new Car(c.Driver, c.License, c.HasTrumpSticker));
-
+                cm.MapCreator(c => new Car(c.Id, c.Driver, c.License, c.HasTrumpSticker));
             });
 
             // BsonClassMap.RegisterClassMap<Bus>(cm =>

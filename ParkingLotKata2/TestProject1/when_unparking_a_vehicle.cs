@@ -1,3 +1,5 @@
+using System;
+using System.Threading.Tasks;
 using FluentAssertions;
 using ParkingLotKata2;
 using Xunit;
@@ -16,23 +18,37 @@ namespace TestProject1
             _startingBalance = 10;
             driver = new Driver();
             driver.AddToWallet(_startingBalance);
-            _vehicle = new Car(driver, "license");
-            sut.ParkVehicle(_vehicle);
+            _vehicle = new Car(new Guid(), driver, "license");
+            
 
-            //Act
-            sut.UnparkVehicle(_vehicle.License, 1);
         }
 
-        [Fact]
-        public void should_replace_the_spaces()
+        async Task Arrange()
         {
+            await sut.ParkVehicle(_vehicle);
+        }
+
+        async Task Act()
+        {
+            sut.UnparkVehicle(_vehicle.License, 1);
+        }
+        
+        [Fact]
+        public async Task should_replace_the_spaces()
+        {
+            await Arrange();
+            await Act();
+            
             //Assert
             _fakeRepository.Vehicles.Should().NotContain(_vehicle);
         }
 
         [Fact]
-        public void should_charge_the_driver()
+        public async Task should_charge_the_driver()
         {
+            await Arrange();
+            await Act();
+            
             //Assert
             driver.Wallet.Should().Be(_startingBalance - 5);
         }

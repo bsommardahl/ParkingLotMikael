@@ -1,11 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ParkingLotKata2
 {
     public interface IGenericRepository<T>
     {
-        IEnumerable<T> Get();
+        Task<IEnumerable<T>> Get();
         T Get(string id);
         T Add(T item);
         void Update(string id, T newItem);

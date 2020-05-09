@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using ParkingLotKata2;
 
 namespace TestProject1
@@ -15,7 +16,7 @@ namespace TestProject1
             Vehicles = new List<Vehicle>();
         }
 
-        public IEnumerable<T> Get()
+        public async Task<IEnumerable<T>> Get()
         {
             return (IEnumerable<T>)Vehicles;
         }

@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using FakeItEasy;
 using FluentAssertions;
 using ParkingLotKata2;
@@ -18,7 +19,7 @@ namespace XUnitTestProject1.when_parking
             A.CallTo(() => _calculateSpaces.GetSpaces(vehicle)).Returns(1000);
 
             //Act
-            Action act = () => Sut.ParkVehicle(vehicle);
+            Func<Task> act = async () => await Sut.ParkVehicle(vehicle);
 
             //Assert
             act.Should().Throw<NoMoreSpaceException>();

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using FluentAssertions;
 using ParkingLotKata2;
@@ -35,7 +36,7 @@ namespace XUnitTestProject1.when_creating_a_cost_calculation_strategy
             var factory = new VehicleCostWithdrawalStrategyFactory(strategies);
 
             //Act
-            var vehicle = new Car(new Driver(), "license");
+            var vehicle = new Car(new Guid(), new Driver(), "license");
             var strategy = factory.Create(vehicle);
             
             //Assert

@@ -1,3 +1,4 @@
+using System;
 using FakeItEasy;
 using FluentAssertions;
 using ParkingLotKata2;
@@ -13,7 +14,7 @@ namespace XUnitTestProject1
             //Arrange
             var sut = new CarCostCalculationStrategy() as IVehicleCostCalculationStrategy<Car>;
             var driver = A.Fake<IDriver>();
-            var vehicle = new Car(driver, "license", true);
+            var vehicle = new Car(new Guid(), driver, "license", true);
 
             //Act
             var amount = sut.Execute(vehicle, 1);

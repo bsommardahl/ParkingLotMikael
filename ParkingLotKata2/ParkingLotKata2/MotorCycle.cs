@@ -1,8 +1,10 @@
+using System;
+
 namespace ParkingLotKata2
 {
     public class MotorCycle : Vehicle
     {
-        public MotorCycle(IDriver driver, string license) : base(driver, license)
+        public MotorCycle(IDriver driver, string license) : base(new Guid(), driver, license)
         {
         }
 

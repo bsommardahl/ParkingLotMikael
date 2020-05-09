@@ -21,7 +21,7 @@ namespace XUnitTestProject1.VehicleCostWithdrawal
             //Act
             var action = new Action(() =>
             {
-                factory.Create(new Car(new Driver(), "license"));
+                factory.Create(new Car(new Guid(), new Driver(), "license"));
             });
 
             //Assert

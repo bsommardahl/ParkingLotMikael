@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using FakeItEasy;
 using FluentAssertions;
@@ -19,7 +20,7 @@ namespace XUnitTestProject1
             _driver = new Driver();
 
             //Act
-            sut = new Car(_driver, expectedLicense);
+            sut = new Car(new Guid(), _driver, expectedLicense);
         }
 
         [Fact]

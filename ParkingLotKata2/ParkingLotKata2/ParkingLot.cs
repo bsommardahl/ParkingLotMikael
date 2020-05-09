@@ -1,6 +1,9 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace ParkingLotKata2
 {
@@ -25,20 +28,31 @@ namespace ParkingLotKata2
             _licenseVerifier = licenseVerifier;
             _repository = repository;
 
+
+            var task = Task.Run(async () =>
+            {
+                for (;;)
+                {
+                    await Task.Delay(1000);
+                    Console.WriteLine("Send the auto-bot.");
+
+                }
+            });
         }
 
-        double GetAvailableSpaces()
+        async Task<double> GetAvailableSpaces()
         {
-            var occupiedSpaces = _repository.Get().Select(x => _calculateSpaces.GetSpaces(x)).Sum();
+            var vehicles = await _repository.Get();
+            var occupiedSpaces = vehicles.Select(x => _calculateSpaces.GetSpaces(x)).Sum();
             return _originalSpaces - occupiedSpaces;
         }
 
-        public void ParkVehicle(IVehicle vehicle)
+        public async Task ParkVehicle(IVehicle vehicle)
         {
             if (vehicle.Length < 1) throw new VehicleHasNoLengthException();
             if (_licenseVerifier.IsInvalid(vehicle.License)) throw new InvalidLicenseException();
 
-            var availableSpaces = GetAvailableSpaces();
+            var availableSpaces = await GetAvailableSpaces();
             var noMoreSpaces = availableSpaces == 0;
 
             var spacesToRemove = _calculateSpaces.GetSpaces(vehicle);

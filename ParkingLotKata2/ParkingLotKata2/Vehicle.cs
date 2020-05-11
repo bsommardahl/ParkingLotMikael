@@ -1,13 +1,10 @@
 using System;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-using MongoDB.Bson.Serialization.Serializers;
 
 namespace ParkingLotKata2
 {
-    public abstract class Vehicle : IVehicle
+    public abstract class Vehicle
     {
-        public Vehicle(Guid id, IDriver driver, string license)
+        protected Vehicle(Guid id, IDriver driver, string license)
         {
             Driver = driver;
             License = license;
@@ -16,9 +13,9 @@ namespace ParkingLotKata2
         }
 
         public Guid Id { get; set; }
-        public IDriver Driver { get; }
+        public virtual IDriver Driver { get; }
         public abstract double Length { get; }
-        public string License { get; private set; }
+        public virtual string License { get; private set; }
 
     }
 }

@@ -9,9 +9,9 @@ using JsonConvert = Newtonsoft.Json.JsonConvert;
 
 namespace ConsoleApp2
 {
-    public class ParkingLotSerializer : SerializerBase<IVehicle>
+    public class ParkingLotSerializer : SerializerBase<Vehicle>
     {
-        public override IVehicle Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
+        public override Vehicle Deserialize(BsonDeserializationContext context, BsonDeserializationArgs args)
         {
             var serializer = BsonSerializer.LookupSerializer(typeof(BsonDocument));
             var document = serializer.Deserialize(context, args);
@@ -35,7 +35,7 @@ namespace ConsoleApp2
             return JsonConvert.DeserializeObject<Vehicle>(documentWithNoId);
         }
 
-        public override void Serialize(BsonSerializationContext context, BsonSerializationArgs args, IVehicle value)
+        public override void Serialize(BsonSerializationContext context, BsonSerializationArgs args, Vehicle value)
         {
             var name = value.GetType().Name;
             var baseTypeName = value.GetType().BaseType?.Name;

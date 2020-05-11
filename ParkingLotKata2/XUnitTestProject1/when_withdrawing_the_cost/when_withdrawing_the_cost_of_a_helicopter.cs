@@ -11,7 +11,7 @@ namespace XUnitTestProject1
         public void should_withdraw_the_helicopter_cost()
         {
             //Arrange
-            var sut = new HelicopterCostCalculationStrategy() as IVehicleCostCalculationStrategy<Helicopter>;
+            var sut = new HelicopterCostCalculationStrategy() as VehicleCostCalculationStrategy<Helicopter>;
             var driver = A.Fake<IDriver>();
 
             //Act

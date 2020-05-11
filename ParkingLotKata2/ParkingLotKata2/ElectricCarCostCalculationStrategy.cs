@@ -1,6 +1,6 @@
 namespace ParkingLotKata2
 {
-    public class ElectricCarCostCalculationStrategy : IVehicleCostCalculationStrategy<ElectricCar>
+    public class ElectricCarCostCalculationStrategy : VehicleCostCalculationStrategy<ElectricCar>
     {
         public double Execute(ElectricCar vehicle, int days)
         {

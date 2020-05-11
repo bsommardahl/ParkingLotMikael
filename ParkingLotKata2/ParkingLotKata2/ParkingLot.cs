@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
-using System.Threading;
 using System.Threading.Tasks;
 
 namespace ParkingLotKata2
@@ -13,13 +9,13 @@ namespace ParkingLotKata2
         readonly IVehicleCostWithdrawalStrategyFactory _vehicleCostWithdrawalStrategyFactory;
         readonly ICalculateSpaces _calculateSpaces;
         readonly ILicenseVerifier _licenseVerifier;
-        private readonly IGenericRepository<IVehicle> _repository;
+        private readonly IGenericRepository<Vehicle> _repository;
 
         readonly int _originalSpaces;
 
         public ParkingLot(int spaces, ILongTermDiscounter longTermDiscounter,
             IVehicleCostWithdrawalStrategyFactory vehicleCostWithdrawalStrategyFactory,
-            ICalculateSpaces calculateSpaces, ILicenseVerifier licenseVerifier, IGenericRepository<IVehicle> repository)
+            ICalculateSpaces calculateSpaces, ILicenseVerifier licenseVerifier, IGenericRepository<Vehicle> repository)
         {
             _longTermDiscounter = longTermDiscounter;
             _vehicleCostWithdrawalStrategyFactory = vehicleCostWithdrawalStrategyFactory;
@@ -48,7 +44,7 @@ namespace ParkingLotKata2
             return _originalSpaces - occupiedSpaces;
         }
 
-        public async Task ParkVehicle(IVehicle vehicle)
+        public async Task ParkVehicle(Vehicle vehicle)
         {
             if (vehicle.Length < 1) throw new VehicleHasNoLengthException();
             if (_licenseVerifier.IsInvalid(vehicle.License)) throw new InvalidLicenseException();
@@ -77,10 +73,10 @@ namespace ParkingLotKata2
             }
             vehicle.Driver.Withdraw(discountedAmount);
 
-            _repository.Remove(vehicle);
+            await _repository.Remove(vehicle);
         }
 
-        private double GetTheAmount<T>(T vehicle, int days) where T : IVehicle
+        private double GetTheAmount<T>(T vehicle, int days) where T : Vehicle
         {
             var strategy = _vehicleCostWithdrawalStrategyFactory.Create(vehicle);
             var amount = strategy(vehicle, days);

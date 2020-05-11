@@ -38,17 +38,17 @@ namespace TestProject1
             throw new NotImplementedException();
         }
 
-        public async Task<T> Remove(T item)
+        public async Task Remove(T item)
         {
             Vehicles.Remove(item as Vehicle);
-            return item;
+
         }
 
-        public async Task<T> Remove(string id)
+        public async Task Remove(string id)
         {
             var item = await Get(id);
             Vehicles.Remove(item as Vehicle);
-            return item;
+
         }
     }
 }

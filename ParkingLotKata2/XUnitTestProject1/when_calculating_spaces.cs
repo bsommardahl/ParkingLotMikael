@@ -29,7 +29,7 @@ namespace XUnitTestProject1
             //Assert
             sut.License.Should().Be(expectedLicense);
         }
-        
+
         [Fact]
         public void should_have_the_driver()
         {
@@ -53,7 +53,7 @@ namespace XUnitTestProject1
         {
             //Arrange
             var metersPerSpace = 2;
-            var vehicle = A.Fake<IVehicle>();
+            var vehicle = A.Fake<Vehicle>();
             A.CallTo(() => vehicle.Length).Returns(metersPerSpace);
 
             //Act

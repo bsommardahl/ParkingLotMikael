@@ -8,7 +8,7 @@ namespace XUnitTestProject1.when_creating_a_cost_calculation_strategy
 {
     public class with_valid_vehicle_type
     {
-        public class FakeCarStrategy : IVehicleCostCalculationStrategy<Car>
+        public class FakeCarStrategy : VehicleCostCalculationStrategy<Car>
         {
             readonly double _amount;
 
@@ -21,13 +21,13 @@ namespace XUnitTestProject1.when_creating_a_cost_calculation_strategy
                 return _amount;
             }
         }
-        
+
         [Fact]
         public void should_return_a_function_that_uses_the_matching_strategy()
         {
             //Arrange
             var expectedAmount = 1234;
-            var strategies = new List<IVehicleCostCalculationStrategy>()
+            var strategies = new List<VehicleCostCalculationStrategy>()
             {
                 new BusCostCalculationStrategy(),
                 new FakeCarStrategy(expectedAmount),
@@ -38,7 +38,7 @@ namespace XUnitTestProject1.when_creating_a_cost_calculation_strategy
             //Act
             var vehicle = new Car(new Guid(), new Driver(), "license");
             var strategy = factory.Create(vehicle);
-            
+
             //Assert
             strategy(vehicle, 1).Should().Be(expectedAmount);
         }

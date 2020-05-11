@@ -1,6 +1,6 @@
 namespace ParkingLotKata2
 {
-    public class HelicopterCostCalculationStrategy : IVehicleCostCalculationStrategy<Helicopter>
+    public class HelicopterCostCalculationStrategy : VehicleCostCalculationStrategy<Helicopter>
     {
         public double Execute(Helicopter vehicle, int days)
         {

@@ -25,13 +25,13 @@ namespace ConsoleApp1
                 CollectionName = Environment.GetEnvironmentVariable("CollectionName")
             };
             var context = new DbContext(dbSettings);
-            var repository = new VehicleRepository<IVehicle>(context);
-            //var repository = new FakeRepository<IVehicle>();
+            var repository = new VehicleRepository<Vehicle>(context);
+            //var repository = new FakeRepository<Vehicle>();
 
 
             var sut = new ParkingLotKata2.ParkingLot(100, new LongTermDiscounter(),
                 new VehicleCostWithdrawalStrategyFactory(
-                    new List<IVehicleCostCalculationStrategy>
+                    new List<VehicleCostCalculationStrategy>
                     {
                         new BusCostCalculationStrategy(), new CarCostCalculationStrategy(),
                         new HelicopterCostCalculationStrategy(), new ElectricCarCostCalculationStrategy(),

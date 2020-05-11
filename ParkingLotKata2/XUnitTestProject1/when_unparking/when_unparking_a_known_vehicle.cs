@@ -9,7 +9,7 @@ namespace XUnitTestProject1.when_unparking
 {
     public class when_unparking_a_known_vehicle : given_a_parking_lot
     {
-        readonly IVehicle _vehicle;
+        readonly Vehicle _vehicle;
         readonly int _days;
         IDriver _driver;
         int _chargeAmount;
@@ -24,7 +24,7 @@ namespace XUnitTestProject1.when_unparking
             _days = 1;
             _moneyInWallet = 2000;
             _license = "Valid";
-            _vehicle = A.Fake<IVehicle>();
+            _vehicle = A.Fake<Vehicle>();
             _driver = A.Fake<IDriver>();
             _chargeAmount = 10;
             _discountedAmount = 1000;

@@ -11,7 +11,7 @@ namespace XUnitTestProject1
         public void should_withdraw_the_amount_for_a_bus()
         {
             //Arrange
-            var sut = new BusCostCalculationStrategy() as IVehicleCostCalculationStrategy<Bus>;
+            var sut = new BusCostCalculationStrategy() as VehicleCostCalculationStrategy<Bus>;
             var driver = A.Fake<IDriver>();
 
             //Act

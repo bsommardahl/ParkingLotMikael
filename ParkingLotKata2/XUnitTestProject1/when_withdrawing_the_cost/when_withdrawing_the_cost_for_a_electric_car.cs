@@ -11,7 +11,7 @@ namespace XUnitTestProject1
         public void should_withdraw_the_electric_car_cost()
         {
             //Arrange
-            var sut = new ElectricCarCostCalculationStrategy() as IVehicleCostCalculationStrategy<ElectricCar>;
+            var sut = new ElectricCarCostCalculationStrategy() as VehicleCostCalculationStrategy<ElectricCar>;
             var driver = A.Fake<IDriver>();
 
             //Act

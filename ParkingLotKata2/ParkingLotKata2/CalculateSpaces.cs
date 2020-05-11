@@ -10,7 +10,7 @@ namespace ParkingLotKata2
             _metersPerSpace = metersPerSpace;
         }
 
-        public double GetSpaces(IVehicle vehicle)
+        public double GetSpaces(Vehicle vehicle)
         {
             return vehicle.Length / _metersPerSpace;
         }

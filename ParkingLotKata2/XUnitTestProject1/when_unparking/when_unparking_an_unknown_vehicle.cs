@@ -14,7 +14,7 @@ namespace XUnitTestProject1.when_unparking
         {
             //Act
             const string license = "Invalid";
-            A.CallTo(() => _vehicleRepository.Get(license)).Returns(Task.FromResult<IVehicle>(null));
+            A.CallTo(() => _vehicleRepository.Get(license)).Returns(Task.FromResult<Vehicle>(null));
             Func<Task> unparkAction = async () => await Sut.UnparkVehicle(license, 1);
 
             //Assert

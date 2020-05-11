@@ -7,14 +7,14 @@ namespace TestProject1
     public abstract class given_an_integrated_parking_lot
     {
         protected ParkingLot sut;
-        protected FakeRepository<IVehicle> _fakeRepository;
+        protected FakeRepository<Vehicle> _fakeRepository;
 
         protected given_an_integrated_parking_lot()
         {
             //Arrange
-            _fakeRepository = new FakeRepository<IVehicle>();
+            _fakeRepository = new FakeRepository<Vehicle>();
             sut = new ParkingLot(100, new LongTermDiscounter(), new VehicleCostWithdrawalStrategyFactory(
-                new List<IVehicleCostCalculationStrategy>
+                new List<VehicleCostCalculationStrategy>
                 {
                     new BusCostCalculationStrategy(), new CarCostCalculationStrategy(),
                     new HelicopterCostCalculationStrategy(), new ElectricCarCostCalculationStrategy(),

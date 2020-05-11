@@ -12,7 +12,7 @@ namespace XUnitTestProject1
         protected readonly int _originalAmountOfSpaces;
         protected ICalculateSpaces _calculateSpaces;
         protected ILicenseVerifier _licenseVerifier;
-        protected IGenericRepository<IVehicle> _vehicleRepository;
+        protected IGenericRepository<Vehicle> _vehicleRepository;
 
         protected given_a_parking_lot()
         {
@@ -21,7 +21,7 @@ namespace XUnitTestProject1
             _vehicleCostWithdrawalStrategyFactory = A.Fake<IVehicleCostWithdrawalStrategyFactory>();
             _calculateSpaces = A.Fake<ICalculateSpaces>();
             _licenseVerifier = A.Fake<ILicenseVerifier>();
-            _vehicleRepository = A.Fake<IGenericRepository<IVehicle>>();
+            _vehicleRepository = A.Fake<IGenericRepository<Vehicle>>();
             Sut = new ParkingLot(_originalAmountOfSpaces, _longTermDiscounter,
                 _vehicleCostWithdrawalStrategyFactory, _calculateSpaces, _licenseVerifier, _vehicleRepository);
         }

@@ -14,7 +14,7 @@ namespace XUnitTestProject1.when_parking
         public void should_reject_new_vehicles()
         {
             //Arrange
-            var vehicle = A.Fake<IVehicle>();
+            var vehicle = A.Fake<Vehicle>();
             A.CallTo(() => vehicle.Length).Returns(1);
             A.CallTo(() => _calculateSpaces.GetSpaces(vehicle)).Returns(1000);
 

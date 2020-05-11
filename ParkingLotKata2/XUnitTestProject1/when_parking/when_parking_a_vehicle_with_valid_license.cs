@@ -13,7 +13,7 @@ namespace XUnitTestProject1
         public void should_throw_an_appropriate_exception()
         {
             //Arrange
-            var vehicle = A.Fake<IVehicle>();
+            var vehicle = A.Fake<Vehicle>();
             A.CallTo(() => vehicle.Length).Returns(0);
 
             //Act
@@ -30,7 +30,7 @@ namespace XUnitTestProject1
         public void should_throw_an_exception()
         {
             //Arrange
-            var vehicleWithInvalidLicense = A.Fake<IVehicle>();
+            var vehicleWithInvalidLicense = A.Fake<Vehicle>();
             A.CallTo(() => vehicleWithInvalidLicense.Length).Returns(2);
             var license = "invalid";
             A.CallTo(() => vehicleWithInvalidLicense.License).Returns(license);
@@ -46,13 +46,13 @@ namespace XUnitTestProject1
 
     public class when_parking_a_vehicle_with_valid_license : given_a_parking_lot
     {
-        private readonly IVehicle _vehicle;
+        private readonly Vehicle _vehicle;
 
         public when_parking_a_vehicle_with_valid_license()
         {
             //Arrange
             var metersPerSpace = 2;
-            _vehicle = A.Fake<IVehicle>();
+            _vehicle = A.Fake<Vehicle>();
             A.CallTo(() => _vehicle.Length).Returns(metersPerSpace);
             A.CallTo(() => _calculateSpaces.GetSpaces(_vehicle)).Returns(1);
             A.CallTo(() => _licenseVerifier.IsInvalid(_vehicle.License)).Returns(false);

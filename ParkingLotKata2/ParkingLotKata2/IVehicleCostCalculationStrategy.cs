@@ -1,11 +1,11 @@
 namespace ParkingLotKata2
 {
-    public interface IVehicleCostCalculationStrategy
+    public interface VehicleCostCalculationStrategy
     {
-        
+
     }
 
-    public interface IVehicleCostCalculationStrategy<in T> : IVehicleCostCalculationStrategy where T : IVehicle
+    public interface VehicleCostCalculationStrategy<in T> : VehicleCostCalculationStrategy where T : Vehicle
     {
         double Execute(T vehicle, int days);
     }

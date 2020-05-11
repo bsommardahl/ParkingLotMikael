@@ -9,8 +9,8 @@ namespace ParkingLotKata2
         Task<T> Get(string id);
         Task<T> Add(T item);
         Task Update(string id, T newItem);
-        Task<T> Remove(T removeItem);
-        Task<T> Remove(string id);
+        Task Remove(T removeItem);
+        Task Remove(string id);
 
     }
 

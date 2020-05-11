@@ -17,7 +17,8 @@ namespace ParkingLot.Data
 
         public IMongoCollection<T> DbSet<T>()
         {
-            return _database.GetCollection<T>(_collectionName);
+            var collection = _database.GetCollection<T>(_collectionName);
+            return collection;
         }
     }
 }

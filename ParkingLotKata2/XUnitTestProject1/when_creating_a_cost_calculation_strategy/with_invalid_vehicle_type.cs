@@ -12,7 +12,7 @@ namespace XUnitTestProject1.VehicleCostWithdrawal
         public void should_throw_no_matching_vehicle_cost_withdrawal_strategy_exception()
         {
             //Arrange
-            var strategies = new List<IVehicleCostCalculationStrategy>()
+            var strategies = new List<VehicleCostCalculationStrategy>()
             {
                 //new CarCostCalculationStrategy()
             };

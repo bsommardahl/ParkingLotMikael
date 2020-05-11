@@ -2,7 +2,7 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace ParkingLotKata2
 {
-    public class BusCostCalculationStrategy : LongTermDiscounter, IVehicleCostCalculationStrategy<Bus>
+    public class BusCostCalculationStrategy : LongTermDiscounter, VehicleCostCalculationStrategy<Bus>
     {
         public double Execute(Bus vehicle, int days)
         {

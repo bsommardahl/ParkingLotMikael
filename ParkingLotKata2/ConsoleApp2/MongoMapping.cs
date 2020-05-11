@@ -39,20 +39,20 @@ namespace ConsoleApp1
                 cm.MapCreator(c => new Car(c.Id, c.Driver, c.License, c.HasTrumpSticker));
             });
 
-            // BsonClassMap.RegisterClassMap<Bus>(cm =>
-            // {
-            //     cm.MapCreator(b => new Bus(b.Driver, b.License));
-            // });
-            //
-            // BsonClassMap.RegisterClassMap<MotorCycle>(cm =>
-            // {
-            //     cm.MapCreator(m => new MotorCycle(m.Driver, m.License));
-            // });
-            //
-            // BsonClassMap.RegisterClassMap<Helicopter>(cm =>
-            // {
-            //     cm.MapCreator(h => new Helicopter(h.Driver, h.License));
-            // });
+            BsonClassMap.RegisterClassMap<Bus>(cm =>
+            {
+                cm.MapCreator(b => new Bus(b.Driver, b.License));
+            });
+
+            BsonClassMap.RegisterClassMap<MotorCycle>(cm =>
+            {
+                cm.MapCreator(m => new MotorCycle(m.Driver, m.License));
+            });
+
+            BsonClassMap.RegisterClassMap<Helicopter>(cm =>
+            {
+                cm.MapCreator(h => new Helicopter(h.Driver, h.License));
+            });
         }
     }
 }

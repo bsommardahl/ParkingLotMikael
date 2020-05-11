@@ -21,36 +21,34 @@ namespace TestProject1
             return (IEnumerable<T>)Vehicles;
         }
 
-        public T Get(string id)
+        public async Task<T> Get(string id)
         {
             var vehicle = Vehicles.FirstOrDefault(x => x.License == id);
             return vehicle as T;
         }
 
-        public T Add(T item)
+        public async Task<T> Add(T item)
         {
             Vehicles.Add(item as Vehicle);
             return item;
         }
 
-        public void Update(string id, T newItem)
+        public async Task Update(string id, T newItem)
         {
             throw new NotImplementedException();
         }
 
-        public void Remove(T item)
+        public async Task<T> Remove(T item)
         {
             Vehicles.Remove(item as Vehicle);
+            return item;
         }
 
-        public void Remove(string id)
+        public async Task<T> Remove(string id)
         {
-            throw new NotImplementedException();
-        }
-
-        public IQueryable<T> Query()
-        {
-            throw new NotImplementedException();
+            var item = await Get(id);
+            Vehicles.Remove(item as Vehicle);
+            return item;
         }
     }
 }

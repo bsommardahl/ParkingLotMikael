@@ -12,27 +12,25 @@ namespace ConsoleApp1
     {
         public static void Map()
         {
-            //BsonSerializer.RegisterSerializer<IVehicle>(new ImpliedImplementationInterfaceSerializer<IVehicle, Vehicle>(BsonSerializer.LookupSerializer<Vehicle>()));
 
             BsonClassMap.RegisterClassMap<Driver>(cm =>
             {
                 cm.AutoMap();
                 cm.MapCreator(x => new Driver(x.Wallet));
             });
+
             BsonClassMap.RegisterClassMap<Vehicle>(cm =>
             {
-                // cm.AutoMap();
-                //cm.MapIdMember(c => c.Id);
+                cm.AutoMap();
 
                 cm.MapIdMember(c => c.Id)
-                    .SetIdGenerator(CombGuidGenerator.Instance)
-                    //.SetSerializer(new GuidSerializer(BsonType.ObjectId))
-                    ;
+                    .SetSerializer(new GuidSerializer(BsonType.String))
+                    .SetIdGenerator(GuidGenerator.Instance);
 
                 cm.SetIsRootClass(true);
                 cm.MapMember(c => c.Driver);
-                cm.MapProperty(c => c.License);
-                // cm.MapField(c => c.License).SetElementName("License");
+                // cm.MapProperty(c => c.License);
+
             });
 
             BsonClassMap.RegisterClassMap<Car>(cm =>

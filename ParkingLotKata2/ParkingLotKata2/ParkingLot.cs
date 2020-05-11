@@ -29,15 +29,16 @@ namespace ParkingLotKata2
             _repository = repository;
 
 
-            var task = Task.Run(async () =>
-            {
-                for (;;)
-                {
-                    await Task.Delay(1000);
-                    Console.WriteLine("Send the auto-bot.");
+            //var task = Task.Run(async () =>
+            //{
+            //    for (; ; )
+            //    {
+            //        await Task.Delay(5000);
+            //        Console.WriteLine("Send the auto-bot.");
 
-                }
-            });
+
+            //    }
+            //});
         }
 
         async Task<double> GetAvailableSpaces()
@@ -59,12 +60,12 @@ namespace ParkingLotKata2
             var vehicleBiggerThanSpacesLeft = spacesToRemove > availableSpaces;
             if (noMoreSpaces || vehicleBiggerThanSpacesLeft)
                 throw new NoMoreSpaceException();
-            _repository.Add(vehicle);
+            await _repository.Add(vehicle);
         }
 
-        public void UnparkVehicle(string license, int days)
+        public async Task UnparkVehicle(string license, int days)
         {
-            var vehicle = _repository.Get(license);
+            var vehicle = await _repository.Get(license);
             if (vehicle == null)
                 throw new UnknownVehicleException();
 

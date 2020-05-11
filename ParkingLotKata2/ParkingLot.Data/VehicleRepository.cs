@@ -7,60 +7,51 @@ using ParkingLotKata2;
 
 namespace ParkingLot.Data
 {
-    public class VehicleRepository<T> : IGenericRepository<T> where T : IVehicle
+    public class VehicleRepository<T> : IGenericRepository<T> where T : class, IVehicle
     {
-        readonly IMongoCollection<T> _items;
+        private readonly IMongoCollection<Vehicle> _items;
 
         public VehicleRepository(IDbContext context)
         {
-            _items = context.DbSet<T>();
+            _items = context.DbSet<Vehicle>();
         }
 
         public async Task<IEnumerable<T>> Get()
         {
             var cursor = await _items.FindAsync(item => true);
-            return cursor.ToList();
+            return (IEnumerable<T>)cursor.ToList();
         }
 
-        public T Get(string id)
+        public async Task<T> Get(string license)
         {
-            var vehicle = default(T);
-            while (vehicle == null)
-            {
-                var task = _items.FindAsync(item => item.License == id);
-                if (task.Result != null)
-                {
-                    vehicle = task.Result.First();
-                }
-            }
-            return vehicle;
+
+            var vehicle = await _items.Find(x => x.License == license).FirstOrDefaultAsync();
+            return vehicle as T;
         }
 
 
-        public T Add(T item)
+        public async Task<T> Add(T item)
         {
-            _items.InsertOne(item);
+            await _items.InsertOneAsync(item as Vehicle);
             return item;
         }
 
-        public void Update(string id, T newItem)
+        public async Task Update(string id, T newItem)
         {
-            _items.ReplaceOne(item => item.License == id, newItem);
+            await _items.ReplaceOneAsync(item => item.License == id, newItem as Vehicle);
         }
 
-        public void Remove(T removeItem)
+        public async Task<T> Remove(T removeItem)
         {
-            _items.DeleteOne(item => item.License == removeItem.License);
+            var vehicle = await _items.FindOneAndDeleteAsync(item => item.License == removeItem.License);
+            return vehicle as T;
         }
 
-        public void Remove(string id)
+        public async Task<T> Remove(string id)
         {
-            _items.DeleteOne(item => item.License == id);
-        }
 
-        public IQueryable<T> Query()
-        {
-            return _items.AsQueryable();
+            var vehicle = await _items.FindOneAndDeleteAsync(item => item.License == id);
+            return vehicle as T;
         }
     }
 }

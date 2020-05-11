@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using ConsoleApp2;
 using MongoDB.Bson.Serialization;
 using MongoDB.Bson.Serialization.Conventions;
+using MongoDB.Driver;
 using ParkingLot.Data;
 using ParkingLotKata2;
 using TestProject1;
@@ -14,10 +15,8 @@ namespace ConsoleApp1
     {
         static async Task Main(string[] args)
         {
-            // BsonSerializer.RegisterSerializer(typeof(IVehicle), new ParkingLotSerializer());
-
             DotNetEnv.Env.Load();
-            //MongoMapping.Map();
+            MongoMapping.Map();
 
             var dbSettings = new DatabaseSettings
             {
@@ -26,8 +25,8 @@ namespace ConsoleApp1
                 CollectionName = Environment.GetEnvironmentVariable("CollectionName")
             };
             var context = new DbContext(dbSettings);
-            //var repository = new VehicleRepository<IVehicle>(context);
-            var repository = new FakeRepository<IVehicle>();
+            var repository = new VehicleRepository<IVehicle>(context);
+            //var repository = new FakeRepository<IVehicle>();
 
 
             var sut = new ParkingLotKata2.ParkingLot(100, new LongTermDiscounter(),
@@ -38,6 +37,8 @@ namespace ConsoleApp1
                         new HelicopterCostCalculationStrategy(), new ElectricCarCostCalculationStrategy(),
                         new MotorCycleCostCalculationStrategy()
                     }), new CalculateSpaces(2), new LicenseVerifier(), repository);
+
+
 
             var driver = new Driver();
             driver.AddToWallet(200);
@@ -54,7 +55,7 @@ namespace ConsoleApp1
                     {
                         Console.WriteLine("parking, license number?");
                         var licenseNumber = Console.ReadLine();
-                        var car = new Car(new Guid(), driver, licenseNumber);
+                        var car = new Car(Guid.NewGuid(), driver, licenseNumber);
                         await sut.ParkVehicle(car);
                     }
                     else if (action.ToUpper().Contains("A"))
@@ -66,14 +67,14 @@ namespace ConsoleApp1
                     else if (action.ToUpper().Contains("L"))
                     {
                         var enumerable = await repository.Get();
-                        foreach (var vehicle in enumerable) 
+                        foreach (var vehicle in enumerable)
                             Console.WriteLine(vehicle.License);
                     }
                     else
                     {
                         Console.WriteLine("unparking, license number?");
                         var licenseNumber = Console.ReadLine();
-                        sut.UnparkVehicle(licenseNumber, 1);
+                        await sut.UnparkVehicle(licenseNumber, 1);
                     }
                 }
                 catch (Exception e)

@@ -57,15 +57,19 @@ namespace XUnitTestProject1
             A.CallTo(() => _calculateSpaces.GetSpaces(_vehicle)).Returns(1);
             A.CallTo(() => _licenseVerifier.IsInvalid(_vehicle.License)).Returns(false);
 
-            //Act
-            Sut.ParkVehicle(_vehicle);
         }
 
         [Fact]
-        public void should_allow_the_vehicle_to_be_parked()
+        public async void should_allow_the_vehicle_to_be_parked()
         {
+            await Act();
             //Assert
             A.CallTo(() => _vehicleRepository.Add(_vehicle)).MustHaveHappened();
         }
+        private async Task Act()
+        {
+            await Sut.ParkVehicle(_vehicle);
+        }
+
     }
 }

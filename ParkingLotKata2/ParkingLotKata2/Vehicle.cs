@@ -11,6 +11,7 @@ namespace ParkingLotKata2
         {
             Driver = driver;
             License = license;
+            Id = id;
 
         }
 

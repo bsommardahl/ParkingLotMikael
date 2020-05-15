@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,7 +10,7 @@ namespace ParkingLotKata2
         readonly IVehicleCostWithdrawalStrategyFactory _vehicleCostWithdrawalStrategyFactory;
         readonly ICalculateSpaces _calculateSpaces;
         readonly ILicenseVerifier _licenseVerifier;
-        private readonly IGenericRepository<Vehicle> _repository;
+        readonly IGenericRepository<Vehicle> _repository;
 
         readonly int _originalSpaces;
 
@@ -24,17 +25,39 @@ namespace ParkingLotKata2
             _licenseVerifier = licenseVerifier;
             _repository = repository;
 
+            var task = Task.Run(async () =>
+            {
+                for (;;)
+                {
+                    await Task.Delay(5000);
+                    await RobotCheckOneVehicle();
+                }
+            });
+        }
 
-            //var task = Task.Run(async () =>
-            //{
-            //    for (; ; )
-            //    {
-            //        await Task.Delay(5000);
-            //        Console.WriteLine("Send the auto-bot.");
+        public event EventHandler<RobotCheckEventArgType> VehicleChecked;
 
+        async Task RobotCheckOneVehicle()
+        {
+            if (VehicleChecked == null) return;
 
-            //    }
-            //});
+            var vehicles = (await _repository.Get()).ToArray();
+            if (!vehicles.Any()) return;
+
+            try
+            {
+                var randomGenerator = new Random(DateTime.Now.Millisecond);
+                var next = randomGenerator.Next(0, vehicles.Count());
+                var vehicle = vehicles.ToArray()[next];
+                var amountOwed = randomGenerator.Next(10, 30);
+                throw new Exception("testing Rx exception handling.");
+                VehicleChecked(this, new RobotCheckEventArgType(vehicle, amountOwed));
+            }
+            catch (Exception e)
+            {
+                //Console.WriteLine(e);
+                throw;
+            }
         }
 
         async Task<double> GetAvailableSpaces()
@@ -68,21 +91,29 @@ namespace ParkingLotKata2
             var amount = GetTheAmount(vehicle, days);
             var discountedAmount = _longTermDiscounter.Discount(days, amount);
             if (discountedAmount > vehicle.Driver.GetWalletSum())
-            {
                 throw new NotEnoughMoneyException("The driver do not have enough money");
-            }
             vehicle.Driver.Withdraw(discountedAmount);
 
             await _repository.Remove(vehicle);
         }
 
-        private double GetTheAmount<T>(T vehicle, int days) where T : Vehicle
+        double GetTheAmount<T>(T vehicle, int days) where T : Vehicle
         {
             var strategy = _vehicleCostWithdrawalStrategyFactory.Create(vehicle);
             var amount = strategy(vehicle, days);
             return amount;
         }
+    }
 
+    public class RobotCheckEventArgType
+    {
+        public Vehicle Vehicle { get; }
+        public int AmountOwed { get; }
 
+        public RobotCheckEventArgType(Vehicle vehicle, int amountOwed)
+        {
+            Vehicle = vehicle;
+            AmountOwed = amountOwed;
+        }
     }
 }

@@ -60,7 +60,6 @@
         <e p="IGenericRepository.cs" t="Include" />
         <e p="ILicenseVerifier.cs" t="Include" />
         <e p="ILongTermDiscounter.cs" t="Include" />
-        <e p="IVehicle.cs" t="Include" />
         <e p="IVehicleCostCalculationStrategy.cs" t="Include" />
         <e p="IVehicleCostWithdrawalStrategyFactory.cs" t="Include" />
         <e p="InvalidLicenseException.cs" t="Include" />
@@ -132,6 +131,7 @@
           <e p="when_unparking_a_known_vehicle.when_parking_lot_is_full.cs" t="Include" />
         </e>
         <e p="when_unparking" t="Include">
+          <e p="when_the_driver_do_not_have_enough_money.cs" t="Include" />
           <e p="when_unparking_a_known_vehicle.cs" t="Include" />
           <e p="when_unparking_an_unknown_vehicle.cs" t="Include" />
         </e>
